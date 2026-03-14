@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F5F0E8" />
+
+  <title>Sobre Nosotros | La Casa de Mamapán</title>
+  <meta name="description" content="Conozca la historia, filosofía y esencia de La Casa de Mamapán, un hotel boutique en Ahuachapán." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sobre Nosotros | La Casa de Mamapán" />
+  <meta property="og:description" content="Historia y hospitalidad se entrelazan en el corazón de Ahuachapán." />
+  <meta property="og:image" content="assets/home/about/about_hero_poster.webp" />
+
+  <link rel="icon" href="assets/brand/brand_favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts: Boutique look -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top progress line (subtle luxury) -->
+  <div class="topline" aria-hidden="true"></div>
+
+  <!-- Header (igual línea gráfica, con navegación al Home) -->
+  <header class="header header--solid" id="siteHeader">
+    <div class="container header__inner">
+      <a class="brand" href="index.html#top" aria-label="Ir al inicio">
+        <img src="assets/brand/Logo La casa de mamapán.jpg.jpeg" alt="La Casa de Mamapán" class="brand__logo brand__logo--dark" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html#encanto" class="nav__link">Encanto</a>
+        <a href="index.html#habitaciones" class="nav__link">Habitaciones</a>
+        <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
+        <a href="index.html#experiencias" class="nav__link">Experiencias</a>
+        <a href="index.html#ofertas" class="nav__link">Ofertas</a>
+        <a href="index.html#opiniones" class="nav__link">Opiniones</a>
+        <a href="index.html#ubicacion" class="nav__link">Ubicación</a>
+        <a href="index.html#contacto" class="nav__link">Contacto</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="iconbtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <a class="btn btn--primary btn--sm header__cta" href="#" data-wa-context="Reserva desde Sobre Nosotros">
+          Reservar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="mobile__panel">
+        <a href="index.html#encanto" class="mobile__link">Encanto</a>
+        <a href="index.html#habitaciones" class="mobile__link">Habitaciones</a>
+        <a href="nosotros.html" class="mobile__link">Sobre Nosotros</a>
+        <a href="index.html#experiencias" class="mobile__link">Experiencias</a>
+        <a href="index.html#ofertas" class="mobile__link">Ofertas</a>
+        <a href="index.html#opiniones" class="mobile__link">Opiniones</a>
+        <a href="index.html#ubicacion" class="mobile__link">Ubicación</a>
+        <a href="index.html#contacto" class="mobile__link">Contacto</a>
+
+        <a class="btn btn--primary mobile__cta" href="#" data-wa-context="Reserva desde menú móvil (Sobre Nosotros)">
+          Reservar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO estilo cinemático -->
+    <section class="hero" style="min-height: 82vh; padding-top: 78px;">
+      <div class="hero__media">
+        <video class="hero__video" autoplay muted loop playsinline poster="assets/home/about/about_hero_poster.webp">
+          <source src="assets/home/about/about_hero_video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow reveal">Nuestra esencia</p>
+        <h1 class="hero__title reveal" style="transition-delay:.06s">Sobre Nosotros</h1>
+        <p class="hero__subtitle reveal" style="transition-delay:.12s; max-width: 700px;">
+          Bienvenidos a La Casa de Mamapán, donde historia y hospitalidad se entrelazan en el corazón de Ahuachapán.
+          Nuestro hotel, ubicado en un edificio bellamente restaurado del siglo XIX, se erige como un faro de comodidad
+          y tradición junto al sereno Parque Concordia.
+        </p>
+
+        <div class="hero__cta reveal" style="transition-delay:.18s">
+          <a class="btn btn--primary" href="#" data-wa-context="Consulta desde Hero (Sobre Nosotros)">
+            Reservar por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="index.html#habitaciones">
+            Ver Habitaciones
+          </a>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#historia" aria-label="Bajar a contenido">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- INTRO + GALERÍA editorial -->
+    <section class="section" id="historia">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Nuestra Historia</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s">
+            Patrimonio vivo en el corazón de Ahuachapán.
+          </p>
+        </header>
+
+        <!-- Layout editorial (texto + galería) -->
+        <div class="location" style="grid-template-columns: 1fr 1fr;">
+          <div class="location__info reveal" style="transition-delay:.06s">
+            <h3 class="location__title">Un edificio que guarda memorias</h3>
+            <p class="location__text" style="font-size:14.8px; line-height:1.9;">
+              La Casa de Mamapan ha sido durante mucho tiempo una piedra angular del rico patrimonio de Ahuachapán.
+              Nuestro edificio, construido originalmente a finales del siglo XIX, ha sido testigo de muchas transformaciones,
+              desde una gran propiedad familiar hasta el encantador hotel que es hoy. Al preservar la integridad arquitectónica
+              y el espíritu de este edificio histórico, ofrecemos a nuestros huéspedes una visión única del pasado y, al mismo tiempo,
+              brindamos todas las comodidades del mundo moderno.
+            </p>
+
+            <div class="location__actions" style="margin-top: 12px;">
+              <a class="btn btn--outline" href="index.html#ubicacion">Ver ubicación</a>
+              <a class="btn btn--primary" href="#" data-wa-context="Consulta historia / edificio (Sobre Nosotros)">
+                Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Galería (3 imágenes) -->
+          <div class="grid grid--3 reveal" style="transition-delay:.12s; grid-template-columns: repeat(2, minmax(0,1fr)); align-content:start;">
+            <article class="card" style="box-shadow: var(--shadow2);">
+              <div class="card__media" style="aspect-ratio: 4/3;">
+                <img src="assets/home/about/about_gallery_01.webp" alt="Arquitectura histórica" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" style="margin:0; font-size:14.5px;">Arquitectura</h3>
+                <p class="card__text" style="margin:6px 0 0;">Detalles que preservan la esencia del siglo XIX.</p>
+              </div>
+            </article>
+
+            <article class="card" style="box-shadow: var(--shadow2);">
+              <div class="card__media" style="aspect-ratio: 4/3;">
+                <img src="assets/home/about/about_gallery_02.webp" alt="Espacios acogedores" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" style="margin:0; font-size:14.5px;">Ambientes</h3>
+                <p class="card__text" style="margin:6px 0 0;">Espacios pensados para descansar con calma.</p>
+              </div>
+            </article>
+
+            <article class="card" style="box-shadow: var(--shadow2); grid-column: 1 / -1;">
+              <div class="card__media" style="aspect-ratio: 16/9;">
+                <img src="assets/home/about/about_gallery_03.webp" alt="Parque Concordia y entorno" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" style="margin:0; font-size:14.5px;">Entorno</h3>
+                <p class="card__text" style="margin:6px 0 0;">Junto al sereno Parque Concordia, en el corazón de la ciudad.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILOSOFÍA (sección premium con fondo tipo experiences) -->
+    <section class="section section--image" id="filosofia" style="--bg:url('assets/home/about/about_philosophy_bg.webp');">
+      <div class="section__veil"></div>
+      <div class="container">
+        <header class="section__head section__head--onimage">
+          <h2 class="section__title section__title--light reveal">Nuestra Filosofía</h2>
+          <p class="section__subtitle section__subtitle--light reveal" style="transition-delay:.06s; max-width: 880px;">
+            En La Casa de Mamapan, creemos en brindar más que solo un lugar para quedarse. Nuestro objetivo es crear una experiencia
+            que refleje la cultura vibrante y la cálida hospitalidad de El Salvador. Cada aspecto de nuestro hotel, desde el arte
+            curado por artistas salvadoreños hasta la cocina de origen local, es un testimonio de nuestro compromiso de celebrar y
+            sostener a la comunidad local.
+          </p>
+        </header>
+
+        <div class="icons reveal" style="transition-delay:.12s;">
+          <div class="iconcard">
+            <div class="iconcard__icon">🎨</div>
+            <div class="iconcard__label">Arte local</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">☕</div>
+            <div class="iconcard__label">Café gourmet</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">🥘</div>
+            <div class="iconcard__label">Origen local</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">🤍</div>
+            <div class="iconcard__label">Hospitalidad</div>
+          </div>
+        </div>
+
+        <div class="center mt-24 reveal" style="transition-delay:.18s;">
+          <a class="btn btn--ghost btn--ghost-light" href="#" data-wa-context="Consulta filosofía / experiencia cultural">
+            Quiero conocer más
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS (editorial + cards) -->
+    <section class="section section--soft" id="servicios">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Nuestros Servicios</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s; max-width: 900px;">
+            Estamos orgullosos de nuestra atención al detalle y servicio personalizado. Nuestro personal no son sólo empleados;
+            son embajadores de la hospitalidad salvadoreña, listos para hacer su estadía lo más cómoda y placentera posible.
+            Ya sea que esté aquí para explorar los sitios históricos, disfrutar de nuestro café gourmet o relajarse en nuestras
+            habitaciones de estilo colonial, La Casa de Mamapan es su hogar lejos del hogar.
+          </p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__media" style="aspect-ratio: 16/10;">
+              <img src="assets/home/about/about_service_01.webp" alt="Atención personalizada" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Atención personalizada</h3>
+              <p class="card__text">Un equipo atento a cada detalle, con calidez y discreción.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay:.06s;">
+            <div class="card__media" style="aspect-ratio: 16/10;">
+              <img src="assets/home/about/about_service_02.webp" alt="Café gourmet" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Café gourmet</h3>
+              <p class="card__text">Sabores seleccionados para acompañar sus mañanas con calma.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay:.12s;">
+            <div class="card__media" style="aspect-ratio: 16/10;">
+              <img src="assets/home/about/about_service_03.webp" alt="Habitaciones estilo colonial" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Estilo colonial</h3>
+              <p class="card__text">Habitaciones con carácter, comodidad y un ambiente único.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="center mt-24 reveal">
+          <a class="btn btn--primary" href="#" data-wa-context="Consulta servicios / comodidades (Sobre Nosotros)">
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONÉCTATE (cierre editorial) -->
+    <section class="section" id="conectate">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Conéctate con Nosotros</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s; max-width: 980px;">
+            Te invitamos a ser parte de nuestra historia, una que continúa escribiéndose con cada huésped que cruza nuestras puertas.
+            Únase a nosotros en La Casa de Mamapan, donde cada estadía es más que una simple visita, es una experiencia que debe atesorar.
+          </p>
+        </header>
+
+        <div class="offer reveal" style="transition-delay:.12s;">
+          <div class="offer__media" style="aspect-ratio: 16/7;">
+            <img src="assets/home/about/about_connect_banner.webp" alt="La Casa de Mamapán - Conéctate" loading="lazy" />
+          </div>
+          <div class="offer__content">
+            <h3 class="offer__title">Reserve directo, con atención personalizada</h3>
+            <p class="offer__text">Un mensaje y comenzamos a planificar su estadía.</p>
+            <div class="offer__actions">
+              <a class="btn btn--outline" href="index.html#habitaciones">Ver habitaciones</a>
+              <a class="btn btn--primary" href="#" data-wa-context="Reserva desde sección Conéctate (Sobre Nosotros)">
+                Reservar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (igual al home, con enlaces correctos) -->
+    <section class="section section--footer" id="contacto">
+      <div class="container footer">
+        <div class="footer__col">
+          <div class="footer__brand">La Casa de Mamapán</div>
+          <p class="footer__text">Hotel Boutique — más cerca de ti.</p>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Contacto</div>
+          <p class="footer__text">WhatsApp: <span class="mono" id="waDisplay">+503 0000-0000</span></p>
+          <p class="footer__text">Teléfono: <span class="mono">+503 0000-0000</span></p>
+          <p class="footer__text">Correo: <span class="mono">reservas@lacasademamapan.com</span></p>
+          <p class="footer__text">Horario: 7:00 a.m. – 10:00 p.m.</p>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Explorar</div>
+          <a class="footer__link" href="index.html#habitaciones">Habitaciones</a>
+          <a class="footer__link" href="nosotros.html">Sobre Nosotros</a>
+          <a class="footer__link" href="index.html#ofertas">Ofertas</a>
+          <a class="footer__link" href="index.html#ubicacion">Ubicación</a>
+          <a class="footer__link" href="#">Políticas</a>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Reservas</div>
+          <p class="footer__text">Reserve rápido y directo con la dueña.</p>
+          <a class="btn btn--primary btn--sm" href="#" data-wa-context="Reserva desde Footer (Sobre Nosotros)">Reservar por WhatsApp</a>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> La Casa de Mamapán — Todos los derechos reservados.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="#" id="waFloat" aria-label="Contactar por WhatsApp" data-wa-context="Botón flotante (Sobre Nosotros)">
+    <span class="wa-float__icon" aria-hidden="true">✆</span>
+    <span class="wa-float__tip">Reservar por WhatsApp</span>
+  </a>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

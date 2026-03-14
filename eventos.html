@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F5F0E8" />
+
+  <title>Eventos | La Casa de Mamapán</title>
+  <meta name="description" content="Naturaleza y elegancia combinadas para eventos inolvidables. Conozca El Bosque de Mamapán y reserve por WhatsApp." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eventos | La Casa de Mamapán" />
+  <meta property="og:description" content="Naturaleza y elegancia combinadas para eventos inolvidables." />
+  <meta property="og:image" content="assets/eventos/hero/eventos_hero_poster.webp" />
+
+  <link rel="icon" href="assets/brand/brand_favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts: Boutique look -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top progress line (subtle luxury) -->
+  <div class="topline" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header header--solid" id="siteHeader">
+    <div class="container header__inner">
+      <a class="brand" href="index.html#top" aria-label="Ir al inicio">
+        <img src="assets/brand/Logo La casa de mamapán.jpg.jpeg" alt="La Casa de Mamapán" class="brand__logo brand__logo--dark" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html#encanto" class="nav__link">Encanto</a>
+        <a href="habitaciones.html" class="nav__link">Habitaciones</a>
+        <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
+        <a href="index.html#experiencias" class="nav__link">Experiencias</a>
+        <a href="eventos.html" class="nav__link">Eventos</a>
+        <a href="index.html#ofertas" class="nav__link">Ofertas</a>
+        <a href="index.html#opiniones" class="nav__link">Opiniones</a>
+        <a href="index.html#ubicacion" class="nav__link">Ubicación</a>
+        <a href="index.html#contacto" class="nav__link">Contacto</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="iconbtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <a class="btn btn--primary btn--sm header__cta" href="#" data-wa-context="Reserva/Consulta desde Eventos">
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="mobile__panel">
+        <a href="index.html#encanto" class="mobile__link">Encanto</a>
+        <a href="habitaciones.html" class="mobile__link">Habitaciones</a>
+        <a href="nosotros.html" class="mobile__link">Sobre Nosotros</a>
+        <a href="index.html#experiencias" class="mobile__link">Experiencias</a>
+        <a href="eventos.html" class="mobile__link">Eventos</a>
+        <a href="index.html#ofertas" class="mobile__link">Ofertas</a>
+        <a href="index.html#opiniones" class="mobile__link">Opiniones</a>
+        <a href="index.html#ubicacion" class="mobile__link">Ubicación</a>
+        <a href="index.html#contacto" class="mobile__link">Contacto</a>
+
+        <a class="btn btn--primary mobile__cta" href="#" data-wa-context="Consulta desde menú móvil (Eventos)">
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO (cinemático) -->
+    <section class="hero" style="min-height: 82vh; padding-top: 78px;">
+      <div class="hero__media">
+        <video class="hero__video" autoplay muted loop playsinline poster="assets/eventos/hero/eventos_hero_poster.webp">
+          <source src="assets/eventos/hero/eventos_hero_video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow reveal">El Bosque de Mamapán</p>
+        <h1 class="hero__title reveal" style="transition-delay:.06s">Naturaleza y Elegancia Combinadas para Eventos Inolvidables.</h1>
+        <p class="hero__subtitle reveal" style="transition-delay:.12s; max-width: 860px;">
+          Un lugar diseñado para celebrar, conectar y crear recuerdos: bodas, retiros corporativos y ocasiones especiales
+          en un entorno sereno a pocos pasos de La Casa de Mamapán.
+        </p>
+
+        <div class="hero__cta reveal" style="transition-delay:.18s">
+          <a class="btn btn--primary" href="#contactoEvento" data-wa-context="Cotización de evento desde Hero">
+            Cotizar mi evento por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="#galeria">
+            Ver galería
+          </a>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#intro" aria-label="Bajar a contenido">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section" id="intro">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Bienvenidos a La Casa de Mamapán</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s;">
+            Un entorno natural, elegante y perfectamente preparado para su próximo gran momento.
+          </p>
+        </header>
+
+        <div class="location" style="grid-template-columns: 1.05fr .95fr;">
+          <div class="location__info reveal" style="transition-delay:.06s;">
+            <h3 class="location__title">El Bosque de Mamapán</h3>
+            <p class="location__text" style="font-size:14.8px; line-height:1.9;">
+              Descubra El Bosque de Mamapan, un idílico lugar para eventos ubicado a pocos pasos de La Casa de Mamapan.
+              Ubicado en medio de una exuberante vegetación, El Bosque de Mamapan ofrece un entorno pintoresco para bodas,
+              retiros corporativos y celebraciones especiales.
+            </p>
+
+            <ul class="location__list" style="margin-top: 14px;">
+              <li>Entorno natural con estética boutique</li>
+              <li>Ideal para fotografía y ambientación</li>
+              <li>Atención personalizada para cada detalle</li>
+            </ul>
+
+            <div class="location__actions" style="margin-top: 14px;">
+              <a class="btn btn--outline" href="#galeria">Ver fotos</a>
+              <a class="btn btn--primary" href="#" data-wa-context="Consulta general de El Bosque de Mamapán">
+                Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="location__map reveal" style="transition-delay:.12s;">
+            <!-- Imagen hero secundaria tipo “poster” para look premium -->
+            <div class="card" style="box-shadow: var(--shadow2); overflow:hidden;">
+              <div class="card__media" style="aspect-ratio: 4/3;">
+                <img src="assets/eventos/intro/eventos_intro_cover.webp" alt="El Bosque de Mamapán - eventos" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" style="margin:0;">Un escenario natural</h3>
+                <p class="card__text" style="margin:6px 0 0;">Donde cada evento se siente auténtico y memorable.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BODAS / SOCIALES -->
+    <section class="section section--soft" id="sociales">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Celebraciones y Reuniones Sociales</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s;">
+            Bodas, aniversarios, celebraciones familiares y momentos que merecen un lugar especial.
+          </p>
+        </header>
+
+        <div class="offer reveal" style="transition-delay:.12s;">
+          <div class="offer__media" style="aspect-ratio: 16/9;">
+            <img src="assets/eventos/sections/eventos_bodas.webp" alt="Bodas y celebraciones" loading="lazy" />
+          </div>
+          <div class="offer__content">
+            <h3 class="offer__title">Un telón de fondo romántico</h3>
+            <p class="offer__text" style="line-height:1.85;">
+              El Bosque de Mamapan ofrece un telón de fondo romántico para su día especial, completo con instalaciones de última
+              generación para garantizar que cada detalle sea perfecto. Desde reuniones íntimas hasta grandes celebraciones,
+              nuestro lugar se adapta a su visión, haciendo que el día de su boda sea realmente mágico.
+            </p>
+            <div class="offer__actions">
+              <a class="btn btn--outline" href="#galeria">Ver galería</a>
+              <a class="btn btn--primary" href="#" data-wa-context="Cotización de boda / social">
+                Cotizar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlights (cards) -->
+        <div class="grid grid--3" style="margin-top:18px;">
+          <article class="card reveal">
+            <div class="card__media" style="aspect-ratio: 16/10;">
+              <img src="assets/eventos/highlights/eventos_hl_01.webp" alt="Montaje elegante" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Montajes elegantes</h3>
+              <p class="card__text">Espacios versátiles para ceremonias y recepciones.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay:.06s;">
+            <div class="card__media" style="aspect-ratio: 16/10;">
+              <img src="assets/eventos/highlights/eventos_hl_02.webp" alt="Fotografía perfecta" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Fotografía perfecta</h3>
+              <p class="card__text">Luz natural y paisajes para recuerdos inolvidables.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay:.12s;">
+            <div class="card__media" style="aspect-ratio: 16/10;">
+              <img src="assets/eventos/highlights/eventos_hl_03.webp" alt="Atención a detalle" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Atención a detalle</h3>
+              <p class="card__text">Acompañamiento para que todo salga impecable.</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CORPORATIVOS -->
+    <section class="section section--image" id="corporativos" style="--bg:url('assets/eventos/sections/eventos_corporativo_bg.webp');">
+      <div class="section__veil"></div>
+      <div class="container">
+        <header class="section__head section__head--onimage">
+          <h2 class="section__title section__title--light reveal">Inspírese y conéctese en un entorno sereno</h2>
+          <p class="section__subtitle section__subtitle--light reveal" style="transition-delay:.06s; max-width: 980px;">
+            Aléjese de la sala de conferencias convencional y organice su próximo evento corporativo en El Bosque de Mamapan.
+            Nuestro lugar ofrece un ambiente refrescante que estimula la creatividad y el trabajo en equipo. Equipado con
+            comodidades modernas y amplio espacio, es ideal para talleres, seminarios y actividades de trabajo en equipo,
+            todo ello en el apacible abrazo de la naturaleza.
+          </p>
+        </header>
+
+        <div class="icons reveal" style="transition-delay:.12s;">
+          <div class="iconcard">
+            <div class="iconcard__icon">🧩</div>
+            <div class="iconcard__label">Team Building</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">🎤</div>
+            <div class="iconcard__label">Talleres & Seminarios</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">🧠</div>
+            <div class="iconcard__label">Creatividad</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">🌿</div>
+            <div class="iconcard__label">Entorno natural</div>
+          </div>
+        </div>
+
+        <div class="center mt-24 reveal" style="transition-delay:.18s;">
+          <a class="btn btn--ghost btn--ghost-light" href="#" data-wa-context="Cotización corporativo">
+            Cotizar evento corporativo por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA premium -->
+    <section class="section section--soft" id="galeria">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Galería</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s;">
+            Visualice el ambiente: naturaleza, montaje y elegancia.
+          </p>
+        </header>
+
+        <!-- Grid editorial moderno -->
+        <div class="grid reveal" style="transition-delay:.12s; grid-template-columns: 1.2fr .8fr; gap: 18px;">
+          <article class="card" style="box-shadow: var(--shadow2);">
+            <div class="card__media" style="aspect-ratio: 16/9;">
+              <img src="assets/eventos/gallery/eventos_gallery_01.webp" alt="Evento en naturaleza" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title" style="margin:0;">Escenarios que impactan</h3>
+              <p class="card__text" style="margin:6px 0 0;">Un lugar que se siente distinto desde el primer vistazo.</p>
+            </div>
+          </article>
+
+          <div class="grid" style="grid-template-columns: 1fr; gap: 18px;">
+            <article class="card" style="box-shadow: var(--shadow2);">
+              <div class="card__media" style="aspect-ratio: 4/3;">
+                <img src="assets/eventos/gallery/eventos_gallery_02.webp" alt="Montaje social" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" style="margin:0; font-size:14.5px;">Social</h3>
+                <p class="card__text" style="margin:6px 0 0;">Celebraciones con encanto.</p>
+              </div>
+            </article>
+
+            <article class="card" style="box-shadow: var(--shadow2);">
+              <div class="card__media" style="aspect-ratio: 4/3;">
+                <img src="assets/eventos/gallery/eventos_gallery_03.webp" alt="Evento corporativo" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" style="margin:0; font-size:14.5px;">Corporativo</h3>
+                <p class="card__text" style="margin:6px 0 0;">Reuniones que inspiran.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="grid reveal" style="transition-delay:.18s; margin-top: 18px; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px;">
+          <article class="card" style="box-shadow: var(--shadow2);">
+            <div class="card__media" style="aspect-ratio: 1/1;">
+              <img src="assets/eventos/gallery/eventos_gallery_04.webp" alt="Detalle 1" loading="lazy" />
+            </div>
+          </article>
+          <article class="card" style="box-shadow: var(--shadow2);">
+            <div class="card__media" style="aspect-ratio: 1/1;">
+              <img src="assets/eventos/gallery/eventos_gallery_05.webp" alt="Detalle 2" loading="lazy" />
+            </div>
+          </article>
+          <article class="card" style="box-shadow: var(--shadow2);">
+            <div class="card__media" style="aspect-ratio: 1/1;">
+              <img src="assets/eventos/gallery/eventos_gallery_06.webp" alt="Detalle 3" loading="lazy" />
+            </div>
+          </article>
+          <article class="card" style="box-shadow: var(--shadow2);">
+            <div class="card__media" style="aspect-ratio: 1/1;">
+              <img src="assets/eventos/gallery/eventos_gallery_07.webp" alt="Detalle 4" loading="lazy" />
+            </div>
+          </article>
+        </div>
+
+        <div class="center mt-24 reveal">
+          <a class="btn btn--primary" href="#" data-wa-context="Consulta desde galería eventos">
+            Cotizar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE / CTA -->
+    <section class="section" id="contactoEvento">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Experimenta la Magia de El Bosque de Mamapan</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s; max-width: 1020px;">
+            Te invitamos a visitar El Bosque de Mamapan para comprobar de primera mano la belleza y versatilidad de nuestro recinto.
+            Programe un recorrido hoy y permítanos ayudarlo a planificar un evento del que sus invitados hablarán en los años venideros.
+          </p>
+        </header>
+
+        <div class="offer reveal" style="transition-delay:.12s;">
+          <div class="offer__media" style="aspect-ratio: 16/7;">
+            <img src="assets/eventos/banner/eventos_cta_banner.webp" alt="Programe un recorrido" loading="lazy" />
+          </div>
+          <div class="offer__content">
+            <h3 class="offer__title">Programe un recorrido</h3>
+            <p class="offer__text">Escríbanos y coordinamos fecha y hora para conocer el lugar.</p>
+            <div class="offer__actions">
+              <a class="btn btn--outline" href="index.html#ubicacion">Ver ubicación</a>
+              <a class="btn btn--primary" href="#" data-wa-context="Agendar recorrido El Bosque de Mamapán">
+                Agendar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="section section--footer" id="contacto">
+      <div class="container footer">
+        <div class="footer__col">
+          <div class="footer__brand">La Casa de Mamapán</div>
+          <p class="footer__text">Hotel Boutique — más cerca de ti.</p>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Contacto</div>
+          <p class="footer__text">WhatsApp: <span class="mono" id="waDisplay">+503 0000-0000</span></p>
+          <p class="footer__text">Teléfono: <span class="mono">+503 0000-0000</span></p>
+          <p class="footer__text">Correo: <span class="mono">reservas@lacasademamapan.com</span></p>
+          <p class="footer__text">Horario: 7:00 a.m. – 10:00 p.m.</p>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Explorar</div>
+          <a class="footer__link" href="habitaciones.html">Habitaciones</a>
+          <a class="footer__link" href="nosotros.html">Sobre Nosotros</a>
+          <a class="footer__link" href="eventos.html">Eventos</a>
+          <a class="footer__link" href="index.html#ofertas">Ofertas</a>
+          <a class="footer__link" href="index.html#ubicacion">Ubicación</a>
+          <a class="footer__link" href="#">Políticas</a>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Reservas</div>
+          <p class="footer__text">Reserve rápido y directo con la dueña.</p>
+          <a class="btn btn--primary btn--sm" href="#" data-wa-context="Reserva desde Footer Eventos">Reservar por WhatsApp</a>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> La Casa de Mamapán — Todos los derechos reservados.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="#" id="waFloat" aria-label="Contactar por WhatsApp" data-wa-context="Botón flotante (Eventos)">
+    <span class="wa-float__icon" aria-hidden="true">✆</span>
+    <span class="wa-float__tip">Cotizar evento</span>
+  </a>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

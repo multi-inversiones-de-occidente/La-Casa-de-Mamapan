@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F5F0E8" />
+
+  <title>La Casa de Mamapán | Hotel Boutique</title>
+  <meta name="description" content="Hotel Boutique La Casa de Mamapán — descanso, calidez y experiencia en un solo lugar. Reserve por WhatsApp." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="La Casa de Mamapán | Hotel Boutique" />
+  <meta property="og:description" content="Descanso, calidez y experiencia en un solo lugar. Reserve por WhatsApp." />
+  <meta property="og:image" content="assets/home/hero/home_hero_poster.webp" />
+
+  <link rel="icon" href="assets/brand/brand_favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts: Boutique look -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top progress line (subtle luxury) -->
+  <div class="topline" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="siteHeader">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <!-- Puedes cambiar por SVG si lo tienes -->
+        <img src="assets/brand/Logo La casa de mamapán.jpg.jpeg" alt="La Casa de Mamapán" class="brand__logo brand__logo--light" />
+        <img src="assets/brand/brand_logo_gold.svg" alt="La Casa de Mamapán" class="brand__logo brand__logo--dark" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#encanto" class="nav__link">Encanto</a>
+        <a href="habitaciones.html" class="nav__link">Habitaciones</a>
+        <a href="nosotros.html" class="nav__link">Nosotros</a>
+        <a href="#experiencias" class="nav__link">Experiencias</a>
+        <!-- NUEVO: Eventos -->
+        <a href="eventos.html" class="nav__link">Eventos</a>
+        <a href="#ofertas" class="nav__link">Ofertas</a>
+        <a href="#opiniones" class="nav__link">Opiniones</a>
+        <a href="#ubicacion" class="nav__link">Ubicación</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="iconbtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <a class="btn btn--primary btn--sm header__cta" href="#" id="ctaHeaderWhatsApp" data-wa-context="Reserva desde el encabezado">
+          Reservar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="mobile__panel">
+        <a href="#encanto" class="mobile__link">Encanto</a>
+        <a href="habitaciones.html" class="mobile__link">Habitaciones</a>
+        <a href="nosotros.html" class="mobile__link">Nosotros</a>
+        <a href="#experiencias" class="mobile__link">Experiencias</a>
+        <!-- NUEVO: Eventos -->
+        <a href="eventos.html" class="mobile__link">Eventos</a>
+        <a href="#ofertas" class="mobile__link">Ofertas</a>
+        <a href="#opiniones" class="mobile__link">Opiniones</a>
+        <a href="#ubicacion" class="mobile__link">Ubicación</a>
+        <a href="#contacto" class="mobile__link">Contacto</a>
+        <a class="btn btn--primary mobile__cta" href="#" id="ctaMobileWhatsApp" data-wa-context="Reserva desde menú móvil">
+          Reservar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div class="hero__media">
+        <video class="hero__video" autoplay muted loop playsinline poster="assets/home/hero/home_hero_poster.webp">
+          <source src="assets/home/hero/home_hero_video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow reveal">Bienvenidos a</p>
+        <h1 class="hero__title reveal" style="transition-delay:.06s">La Casa de Mamapán</h1>
+        <p class="hero__subtitle reveal" style="transition-delay:.12s">
+          Hotel Boutique — descanso, calidez y experiencia en un solo lugar.
+        </p>
+
+        <div class="hero__cta reveal" style="transition-delay:.18s">
+          <a class="btn btn--primary" href="#" id="ctaHeroWhatsApp" data-wa-context="Reserva desde Hero">
+            Reservar por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="habitaciones.html">
+            Ver Habitaciones
+          </a>
+        </div>
+      </div>
+
+      <!-- subtle scroll hint -->
+      <a class="hero__scroll" href="#encanto" aria-label="Bajar a contenido">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- SECTION: ENCANTO / HIGHLIGHTS -->
+    <section class="section" id="encanto">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Descubre Nuestro Encanto</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s">
+            Hospédese con nosotros y viva una experiencia única.
+          </p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__media">
+              <img src="assets/home/highlights/home_highlight_rooms.webp" alt="Elegantes Habitaciones" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Elegantes Habitaciones</h3>
+              <p class="card__text">Diseño acogedor, limpieza impecable y confort boutique.</p>
+              <a class="card__link" href="habitaciones.html">Ver habitaciones <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay:.06s">
+            <div class="card__media">
+              <img src="assets/home/highlights/home_highlight_breakfast.webp" alt="Desayuno Incluido" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Desayuno Incluido</h3>
+              <p class="card__text">Sabores locales y opciones frescas para empezar perfecto.</p>
+              <a class="card__link" href="#contacto">Consultar <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay:.12s">
+            <div class="card__media">
+              <img src="assets/home/highlights/home_highlight_about.webp" alt="Sobre Nosotros" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Nosotros</h3>
+              <p class="card__text">Conozca la historia y la esencia que hacen único a La Casa de Mamapán.</p>
+              <a class="card__link" href="nosotros.html">Conocer más <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: HABITACIONES -->
+    <section class="section section--soft" id="habitaciones">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Nuestras Habitaciones</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s">
+            Elija su lugar ideal para descansar.
+          </p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="room reveal">
+            <div class="room__media">
+              <img src="assets/home/rooms/room_suite_deluxe_cover.webp" alt="Suite Deluxe" loading="lazy" />
+              <span class="badge">Favorita</span>
+            </div>
+            <div class="room__body">
+              <h3 class="room__title">Suite Deluxe</h3>
+              <ul class="room__meta">
+                <li>Cama King</li>
+                <li>A/C</li>
+                <li>Baño privado</li>
+                <li>WiFi</li>
+              </ul>
+              <div class="room__actions">
+                <a class="btn btn--outline btn--sm" href="#">Ver Detalles</a>
+                <a class="btn btn--primary btn--sm"
+                   href="#"
+                   data-wa-room="Suite Deluxe"
+                   data-wa-context="Reserva Suite Deluxe desde Home">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room reveal" style="transition-delay:.06s">
+            <div class="room__media">
+              <img src="assets/home/rooms/room_double_cover.webp" alt="Habitación Doble" loading="lazy" />
+            </div>
+            <div class="room__body">
+              <h3 class="room__title">Habitación Doble</h3>
+              <ul class="room__meta">
+                <li>2 camas</li>
+                <li>A/C</li>
+                <li>TV</li>
+                <li>WiFi</li>
+              </ul>
+              <div class="room__actions">
+                <a class="btn btn--outline btn--sm" href="#">Ver Detalles</a>
+                <a class="btn btn--primary btn--sm"
+                   href="#"
+                   data-wa-room="Habitación Doble"
+                   data-wa-context="Reserva Habitación Doble desde Home">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room reveal" style="transition-delay:.12s">
+            <div class="room__media">
+              <img src="assets/home/rooms/room_family_cover.webp" alt="Familiar" loading="lazy" />
+            </div>
+            <div class="room__body">
+              <h3 class="room__title">Familiar</h3>
+              <ul class="room__meta">
+                <li>Espaciosa</li>
+                <li>Ideal para grupos</li>
+                <li>A/C</li>
+                <li>WiFi</li>
+              </ul>
+              <div class="room__actions">
+                <a class="btn btn--outline btn--sm" href="#">Ver Detalles</a>
+                <a class="btn btn--primary btn--sm"
+                   href="#"
+                   data-wa-room="Familiar"
+                   data-wa-context="Reserva Familiar desde Home">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="center mt-24 reveal">
+          <a class="btn btn--ghost" href="habitaciones.html">Ver todas las habitaciones</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: EXPERIENCIAS -->
+    <section class="section section--image" id="experiencias" style="--bg:url('assets/home/experiences/home_experiences_bg.webp');">
+      <div class="section__veil"></div>
+      <div class="container">
+        <header class="section__head section__head--onimage">
+          <h2 class="section__title section__title--light reveal">Experiencias & Servicios</h2>
+          <p class="section__subtitle section__subtitle--light reveal" style="transition-delay:.06s">
+            Cada detalle está pensado para que su estadía se sienta única.
+          </p>
+        </header>
+
+        <div class="icons reveal" style="transition-delay:.12s">
+          <div class="iconcard">
+            <div class="iconcard__icon">🧭</div>
+            <div class="iconcard__label">Tours & Actividades</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">🍽️</div>
+            <div class="iconcard__label">Gastronomía Local</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">🌿</div>
+            <div class="iconcard__label">Jardines & Naturaleza</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">✨</div>
+            <div class="iconcard__label">Eventos Especiales</div>
+          </div>
+        </div>
+
+        <div class="center mt-24 reveal" style="transition-delay:.18s">
+          <a class="btn btn--ghost btn--ghost-light" href="#" data-wa-context="Consulta de experiencias desde Home">
+            Consultar experiencias por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: OFERTAS -->
+    <section class="section" id="ofertas">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Ofertas Especiales</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s">
+            Paquetes diseñados para disfrutar más, pagando mejor.
+          </p>
+        </header>
+
+        <div class="offer reveal" style="transition-delay:.12s">
+          <div class="offer__media">
+            <img src="assets/home/offers/offer_romantic_escape.webp" alt="Escapada Romántica" loading="lazy" />
+          </div>
+          <div class="offer__content">
+            <h3 class="offer__title">Escapada Romántica</h3>
+            <p class="offer__text">Disfrute una noche especial con detalles pensados para sorprender.</p>
+            <div class="offer__actions">
+              <a class="btn btn--outline" href="#">Ver Oferta</a>
+              <a class="btn btn--primary" href="#" data-wa-context="Reserva oferta Escapada Romántica">
+                Reservar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: OPINIONES -->
+    <section class="section section--soft" id="opiniones">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Opiniones de Nuestros Huéspedes</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s">
+            Lo que más nos importa es que su estadía se sienta perfecta.
+          </p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="review reveal">
+            <div class="review__head">
+              <img class="review__avatar" src="assets/home/reviews/review_guest_01.webp" alt="María C." loading="lazy" />
+              <div>
+                <div class="review__name">María C.</div>
+                <div class="review__stars" aria-label="5 estrellas">★★★★★</div>
+              </div>
+            </div>
+            <p class="review__text">
+              Atención increíble, todo limpio y súper acogedor. Volvería sin pensarlo.
+            </p>
+          </article>
+
+          <article class="review reveal" style="transition-delay:.06s">
+            <div class="review__head">
+              <img class="review__avatar" src="assets/home/reviews/review_guest_02.webp" alt="Carlos R." loading="lazy" />
+              <div>
+                <div class="review__name">Carlos R.</div>
+                <div class="review__stars" aria-label="5 estrellas">★★★★★</div>
+              </div>
+            </div>
+            <p class="review__text">
+              Excelente ubicación, ambiente tranquilo y el desayuno buenísimo.
+            </p>
+          </article>
+
+          <article class="review reveal" style="transition-delay:.12s">
+            <div class="review__head">
+              <img class="review__avatar" src="assets/home/reviews/review_guest_03.webp" alt="Andrea M." loading="lazy" />
+              <div>
+                <div class="review__name">Andrea M.</div>
+                <div class="review__stars" aria-label="5 estrellas">★★★★★</div>
+              </div>
+            </div>
+            <p class="review__text">
+              Perfecto para descansar, las habitaciones son hermosas y cómodas.
+            </p>
+          </article>
+        </div>
+
+        <div class="center mt-24 reveal">
+          <a class="btn btn--ghost" href="#">Ver más reseñas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: UBICACIÓN -->
+    <section class="section" id="ubicacion">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Ubicación</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s">
+            Fácil de llegar, difícil de olvidar.
+          </p>
+        </header>
+
+        <div class="location">
+          <div class="location__map reveal">
+            <iframe
+              title="Mapa La Casa de Mamapán"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Ahuachap%C3%A1n&output=embed">
+            </iframe>
+          </div>
+
+          <div class="location__info reveal" style="transition-delay:.06s">
+            <h3 class="location__title">Cómo llegar</h3>
+            <p class="location__text">
+              Comparta su ubicación y con gusto le orientamos la mejor ruta.
+            </p>
+
+            <ul class="location__list">
+              <li>Acceso a rutas principales</li>
+              <li>Zona tranquila y segura</li>
+              <li>Recomendaciones cercanas</li>
+            </ul>
+
+            <div class="location__actions">
+              <a class="btn btn--outline" href="https://www.google.com/maps" target="_blank" rel="noopener">
+                Abrir en Google Maps
+              </a>
+              <a class="btn btn--primary" href="#" data-wa-context="Consulta ubicación desde Home">
+                Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO (footer target) -->
+    <section class="section section--footer" id="contacto">
+      <div class="container footer">
+        <div class="footer__col">
+          <div class="footer__brand">La Casa de Mamapán</div>
+          <p class="footer__text">Hotel Boutique — más cerca de ti.</p>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Contacto</div>
+          <p class="footer__text">WhatsApp: <span class="mono" id="waDisplay">+503 0000-0000</span></p>
+          <p class="footer__text">Teléfono: <span class="mono">+503 0000-0000</span></p>
+          <p class="footer__text">Correo: <span class="mono">reservas@lacasademamapan.com</span></p>
+          <p class="footer__text">Horario: 7:00 a.m. – 10:00 p.m.</p>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Explorar</div>
+          <a class="footer__link" href="habitaciones.html">Habitaciones</a>
+          <a class="footer__link" href="nosotros.html">Nosotros</a>
+          <a class="footer__link" href="eventos.html">Eventos</a>
+          <a class="footer__link" href="#ofertas">Ofertas</a>
+          <a class="footer__link" href="#ubicacion">Ubicación</a>
+          <a class="footer__link" href="#">Políticas</a>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Reservas</div>
+          <p class="footer__text">Reserve rápido y directo con la dueña.</p>
+          <a class="btn btn--primary btn--sm" href="#" data-wa-context="Reserva desde Footer">Reservar por WhatsApp</a>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> La Casa de Mamapán — Todos los derechos reservados.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="#" id="waFloat" aria-label="Contactar por WhatsApp" data-wa-context="Botón flotante">
+    <span class="wa-float__icon" aria-hidden="true">✆</span>
+    <span class="wa-float__tip">Reservar por WhatsApp</span>
+  </a>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
