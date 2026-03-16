@@ -20,6 +20,9 @@
   <!-- Fonts: Boutique look -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome para redes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -31,7 +34,6 @@
   <header class="header" id="siteHeader">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="Ir al inicio">
-        <!-- Puedes cambiar por SVG si lo tienes -->
         <img src="assets/brand/Logo La casa de mamapán.jpg.jpeg" alt="La Casa de Mamapán" class="brand__logo brand__logo--light" />
         <img src="assets/brand/brand_logo_gold.svg" alt="La Casa de Mamapán" class="brand__logo brand__logo--dark" />
       </a>
@@ -46,6 +48,22 @@
       </nav>
 
       <div class="header__actions">
+        <!-- Redes sociales header -->
+        <div style="display:flex; align-items:center; gap:10px; margin-right:8px;">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
+             style="width:36px; height:36px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); transition:.2s;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"
+             style="width:36px; height:36px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); transition:.2s;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"
+             style="width:36px; height:36px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); transition:.2s;">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+
         <button class="iconbtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
@@ -65,6 +83,23 @@
         <a href="#ubicacion" class="mobile__link">Ubicación</a>
         <a href="#opiniones" class="mobile__link">Opiniones</a>
         <a href="#contacto" class="mobile__link">Contacto</a>
+
+        <!-- Redes sociales menú móvil -->
+        <div style="display:flex; align-items:center; gap:12px; margin-top:16px; margin-bottom:10px;">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
+             style="width:42px; height:42px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#1E1B16; background:rgba(30,27,22,.05); border:1px solid rgba(30,27,22,.10);">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"
+             style="width:42px; height:42px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#1E1B16; background:rgba(30,27,22,.05); border:1px solid rgba(30,27,22,.10);">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"
+             style="width:42px; height:42px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#1E1B16; background:rgba(30,27,22,.05); border:1px solid rgba(30,27,22,.10);">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+
         <a class="btn btn--primary mobile__cta" href="#" id="ctaMobileWhatsApp" data-wa-context="Reserva desde menú móvil">
           Reservar por WhatsApp
         </a>
@@ -99,7 +134,6 @@
         </div>
       </div>
 
-      <!-- subtle scroll hint -->
       <a class="hero__scroll" href="#encanto" aria-label="Bajar a contenido">
         <span></span>
       </a>
@@ -389,6 +423,22 @@
         <div class="footer__col">
           <div class="footer__brand">La Casa de Mamapán</div>
           <p class="footer__text">Hotel Boutique — más cerca de ti.</p>
+
+          <!-- Redes sociales footer -->
+          <div style="display:flex; align-items:center; gap:12px; margin-top:16px;">
+            <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
+               style="width:38px; height:38px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.16);">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"
+               style="width:38px; height:38px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.16);">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"
+               style="width:38px; height:38px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.16);">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
         </div>
 
         <div class="footer__col">
