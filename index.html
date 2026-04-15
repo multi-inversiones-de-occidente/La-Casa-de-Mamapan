@@ -32,12 +32,7 @@
 
   <!-- Header -->
   <header class="header" id="siteHeader">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Ir al inicio">
-        <img src="assets/brand/Logo La casa de mamapán.jpg.jpeg" alt="La Casa de Mamapán" class="brand__logo brand__logo--light" />
-        <img src="assets/brand/brand_logo_gold.svg" alt="La Casa de Mamapán" class="brand__logo brand__logo--dark" />
-      </a>
-
+    <div class="container header__inner" style="justify-content:center; position:relative;">
       <nav class="nav" id="nav">
         <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
         <a href="#experiencias" class="nav__link">Experiencias</a>
@@ -47,7 +42,7 @@
         <a href="#contacto" class="nav__link">Contacto</a>
       </nav>
 
-      <div class="header__actions">
+      <div class="header__actions" style="position:absolute; right:0; top:50%; transform:translateY(-50%);">
         <!-- Redes sociales header -->
         <div style="display:flex; align-items:center; gap:10px; margin-right:8px;">
           <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
@@ -72,6 +67,16 @@
           Reservar por WhatsApp
         </a>
       </div>
+    </div>
+
+    <!-- Logo reposicionado de forma estratégica -->
+    <div style="position:absolute; left:50%; transform:translateX(-50%); top:76px; z-index:20;">
+      <a href="#top" aria-label="Ir al inicio"
+         style="display:flex; align-items:center; justify-content:center; width:132px; height:132px; border-radius:999px; background:rgba(245,240,232,.92); backdrop-filter:blur(8px); box-shadow:0 18px 40px rgba(0,0,0,.16); border:1px solid rgba(255,255,255,.65); overflow:hidden;">
+        <img src="assets/brand/Logo La casa de mamapán.jpg.jpeg"
+             alt="La Casa de Mamapán"
+             style="width:96px; height:96px; object-fit:contain; border-radius:999px;" />
+      </a>
     </div>
 
     <!-- Mobile menu -->
