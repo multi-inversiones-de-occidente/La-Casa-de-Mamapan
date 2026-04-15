@@ -70,6 +70,8 @@ ul{margin:0; padding:0}
   justify-content:center;
   gap: 14px;
   position: relative;
+  padding-right: 290px; /* reserva espacio para redes + botón */
+  padding-left: 32px;
 }
 
 /* El logo original del header se oculta porque ahora irá centrado debajo */
@@ -87,6 +89,7 @@ ul{margin:0; padding:0}
   align-items:center;
   flex-wrap: nowrap;
   white-space: nowrap;
+  max-width: 100%;
 }
 .nav__link{
   font-size: 13px;
@@ -625,11 +628,26 @@ ul{margin:0; padding:0}
 
 /* Responsive */
 @media (max-width: 1180px){
+  .header__inner{
+    padding-right: 250px;
+  }
   .nav{
     gap: 14px;
   }
   .nav__link{
     font-size: 12.4px;
+  }
+}
+
+@media (max-width: 1040px){
+  .header__inner{
+    padding-right: 220px;
+  }
+  .nav{
+    gap: 12px;
+  }
+  .nav__link{
+    font-size: 12px;
   }
 }
 
@@ -639,6 +657,8 @@ ul{margin:0; padding:0}
   .header__cta{display:none}
   .header__inner{
     justify-content:flex-end;
+    padding-right: 0;
+    padding-left: 0;
   }
   .header__actions{
     position: static;
