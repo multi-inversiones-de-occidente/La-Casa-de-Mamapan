@@ -1,7 +1,7 @@
 /* =========================
    CONFIG (edítalo tú)
 ========================= */
-const WHATSAPP_NUMBER_E164 = "50300000000"; // <-- CAMBIA: Ejemplo El Salvador +503 + número (sin +, sin guiones)
+const WHATSAPP_NUMBER_E164 = "50324134747"; // <-- CAMBIA: Ejemplo El Salvador +503 + número (sin +, sin guiones)
 const HOTEL_NAME = "La Casa de Mamapán";
 
 /* Mensaje base (se adapta según contexto) */
