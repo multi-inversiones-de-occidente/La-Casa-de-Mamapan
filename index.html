@@ -32,15 +32,16 @@
 
   <!-- Header -->
   <header class="header" id="siteHeader">
-    <div class="container header__inner" style="justify-content:center; position:relative; padding-left:170px;">
+    <div class="container header__inner">
 
       <!-- Logo fijo dentro del header -->
-      <div style="position:absolute; left:0; top:50%; transform:translateY(-50%); z-index:25;">
-        <a href="#top" aria-label="Ir al inicio"
-           style="display:flex; align-items:center; justify-content:center; width:96px; height:96px; border-radius:999px; background:rgba(245,240,232,.92); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); box-shadow:0 14px 34px rgba(0,0,0,.14); border:1px solid rgba(255,255,255,.65); overflow:hidden;">
-          <img src="assets/brand/Logo La casa de mamapán.jpg.jpeg"
-               alt="La Casa de Mamapán"
-               style="width:72px; height:72px; object-fit:contain; border-radius:999px;" />
+      <div class="header__logo-fixed">
+        <a href="#top" aria-label="Ir al inicio" class="header__logo-link">
+          <img
+            src="assets/brand/Logo La casa de mamapán.jpg.jpeg"
+            alt="La Casa de Mamapán"
+            class="header__logo-img"
+          />
         </a>
       </div>
 
@@ -53,19 +54,16 @@
         <a href="#contacto" class="nav__link">Contacto</a>
       </nav>
 
-      <div class="header__actions" style="position:absolute; right:0; top:50%; transform:translateY(-50%);">
+      <div class="header__actions">
         <!-- Redes sociales header -->
-        <div style="display:flex; align-items:center; gap:10px; margin-right:8px;">
-          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
-             style="width:36px; height:36px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); transition:.2s;">
+        <div class="header__socials">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="header__social-link">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"
-             style="width:36px; height:36px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); transition:.2s;">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="header__social-link">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"
-             style="width:36px; height:36px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); transition:.2s;">
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="header__social-link">
             <i class="fab fa-tiktok"></i>
           </a>
         </div>
@@ -91,17 +89,14 @@
         <a href="#contacto" class="mobile__link">Contacto</a>
 
         <!-- Redes sociales menú móvil -->
-        <div style="display:flex; align-items:center; gap:12px; margin-top:16px; margin-bottom:10px;">
-          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
-             style="width:42px; height:42px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#1E1B16; background:rgba(30,27,22,.05); border:1px solid rgba(30,27,22,.10);">
+        <div class="mobile__socials">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="mobile__social-link">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"
-             style="width:42px; height:42px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#1E1B16; background:rgba(30,27,22,.05); border:1px solid rgba(30,27,22,.10);">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="mobile__social-link">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"
-             style="width:42px; height:42px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#1E1B16; background:rgba(30,27,22,.05); border:1px solid rgba(30,27,22,.10);">
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="mobile__social-link">
             <i class="fab fa-tiktok"></i>
           </a>
         </div>
