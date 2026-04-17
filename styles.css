@@ -74,7 +74,7 @@ ul{margin:0; padding:0}
   padding-left: 32px;
 }
 
-/* El logo original del header se oculta porque ahora irá centrado debajo */
+/* El logo original del header se oculta porque ahora irá fuera del header */
 .brand{
   display:none;
 }
@@ -147,30 +147,35 @@ ul{margin:0; padding:0}
 .iconbtn span:nth-child(2){top:21px}
 .iconbtn span:nth-child(3){top:28px}
 
-/* Logo estratégico centrado debajo del header */
-.header__floating-logo{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  top:76px;
-  z-index:20;
+/* Logo fijo lateral, separado del header */
+.site-fixed-logo{
+  position: fixed;
+  top: 102px;
+  left: 22px;
+  z-index: 950;
 }
-.header__floating-logo a{
+.site-fixed-logo a{
   display:flex;
   align-items:center;
   justify-content:center;
-  width:132px;
-  height:132px;
+  width:118px;
+  height:118px;
   border-radius:999px;
-  background:rgba(245,240,232,.92);
-  backdrop-filter: blur(8px);
-  box-shadow:0 18px 40px rgba(0,0,0,.16);
+  background:rgba(245,240,232,.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:0 16px 40px rgba(0,0,0,.16);
   border:1px solid rgba(255,255,255,.65);
   overflow:hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
-.header__floating-logo img{
-  width:96px;
-  height:96px;
+.site-fixed-logo a:hover{
+  transform: translateY(-2px);
+  box-shadow:0 20px 46px rgba(0,0,0,.20);
+}
+.site-fixed-logo img{
+  width:86px;
+  height:86px;
   object-fit:contain;
   border-radius:999px;
 }
@@ -664,16 +669,17 @@ ul{margin:0; padding:0}
     position: static;
     transform: none;
   }
-  .header__floating-logo{
-    top: 72px;
+  .site-fixed-logo{
+    top: 88px;
+    left: 14px;
   }
-  .header__floating-logo a{
-    width:106px;
-    height:106px;
+  .site-fixed-logo a{
+    width:94px;
+    height:94px;
   }
-  .header__floating-logo img{
-    width:78px;
-    height:78px;
+  .site-fixed-logo img{
+    width:68px;
+    height:68px;
   }
   .grid--3{grid-template-columns: repeat(2, minmax(0,1fr))}
   .icons{grid-template-columns: repeat(2, minmax(0,1fr))}
@@ -686,16 +692,17 @@ ul{margin:0; padding:0}
 }
 
 @media (max-width: 560px){
-  .header__floating-logo{
-    top: 68px;
+  .site-fixed-logo{
+    top: 84px;
+    left: 12px;
   }
-  .header__floating-logo a{
-    width:90px;
-    height:90px;
+  .site-fixed-logo a{
+    width:78px;
+    height:78px;
   }
-  .header__floating-logo img{
-    width:66px;
-    height:66px;
+  .site-fixed-logo img{
+    width:56px;
+    height:56px;
   }
   .grid--3{grid-template-columns: 1fr}
   .offer__media{aspect-ratio: 16/9}
