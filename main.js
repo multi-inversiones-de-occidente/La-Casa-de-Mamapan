@@ -69,6 +69,42 @@ document.querySelectorAll(".mobile__link").forEach(a => {
 });
 
 /* =========================
+   Language selector (base visual)
+========================= */
+const langButtons = document.querySelectorAll(".lang-btn");
+
+function setActiveLanguage(lang) {
+  langButtons.forEach((btn) => {
+    const isActive = btn.dataset.lang === lang;
+    btn.dataset.active = isActive ? "true" : "false";
+
+    const isMobile = btn.closest(".mobile__panel");
+
+    if (isMobile) {
+      btn.style.background = isActive ? "rgba(31,111,74,.12)" : "rgba(30,27,22,.05)";
+      btn.style.borderColor = isActive ? "rgba(31,111,74,.32)" : "rgba(30,27,22,.10)";
+      btn.style.color = "#1E1B16";
+    } else {
+      btn.style.background = isActive ? "rgba(255,255,255,.24)" : "rgba(255,255,255,.10)";
+      btn.style.borderColor = isActive ? "rgba(255,255,255,.40)" : "rgba(255,255,255,.22)";
+      btn.style.color = "#fff";
+    }
+  });
+
+  localStorage.setItem("site_language", lang);
+  document.documentElement.setAttribute("lang", lang);
+}
+
+langButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    setActiveLanguage(btn.dataset.lang || "es");
+  });
+});
+
+const savedLanguage = localStorage.getItem("site_language") || "es";
+setActiveLanguage(savedLanguage);
+
+/* =========================
    WhatsApp bindings
 ========================= */
 function bindWhatsAppLinks() {
