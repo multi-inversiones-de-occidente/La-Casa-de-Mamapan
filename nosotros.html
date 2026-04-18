@@ -20,6 +20,9 @@
   <!-- Fonts: Boutique look -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome para redes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -27,25 +30,45 @@
   <!-- Top progress line (subtle luxury) -->
   <div class="topline" aria-hidden="true"></div>
 
-  <!-- Header (igual línea gráfica, con navegación al Home) -->
+  <!-- Header -->
   <header class="header header--solid" id="siteHeader">
     <div class="container header__inner">
-      <a class="brand" href="index.html#top" aria-label="Ir al inicio">
-        <img src="assets/brand/Logo La casa de mamapán.jpg.jpeg" alt="La Casa de Mamapán" class="brand__logo brand__logo--dark" />
-      </a>
+
+      <!-- Logo fijo dentro del header -->
+      <div class="header__logo-fixed">
+        <a href="index.html#top" aria-label="Ir al inicio" class="header__logo-link">
+          <img
+            src="assets/brand/Logo La casa de mamapán.jpg.jpeg"
+            alt="La Casa de Mamapán"
+            class="header__logo-img"
+          />
+        </a>
+      </div>
 
       <nav class="nav" id="nav">
-        <a href="index.html#encanto" class="nav__link">Encanto</a>
-        <a href="index.html#habitaciones" class="nav__link">Habitaciones</a>
+        <a href="index.html#top" class="nav__link">Inicio</a>
         <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
         <a href="index.html#experiencias" class="nav__link">Experiencias</a>
-        <a href="index.html#ofertas" class="nav__link">Ofertas</a>
-        <a href="index.html#opiniones" class="nav__link">Opiniones</a>
+        <a href="habitaciones.html" class="nav__link">Habitaciones</a>
         <a href="index.html#ubicacion" class="nav__link">Ubicación</a>
+        <a href="index.html#opiniones" class="nav__link">Opiniones</a>
         <a href="index.html#contacto" class="nav__link">Contacto</a>
       </nav>
 
       <div class="header__actions">
+        <!-- Redes sociales header -->
+        <div class="header__socials">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="header__social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="header__social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="header__social-link">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+
         <button class="iconbtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
@@ -59,14 +82,26 @@
     <!-- Mobile menu -->
     <div class="mobile" id="mobileMenu" aria-hidden="true">
       <div class="mobile__panel">
-        <a href="index.html#encanto" class="mobile__link">Encanto</a>
-        <a href="index.html#habitaciones" class="mobile__link">Habitaciones</a>
+        <a href="index.html#top" class="mobile__link">Inicio</a>
         <a href="nosotros.html" class="mobile__link">Sobre Nosotros</a>
         <a href="index.html#experiencias" class="mobile__link">Experiencias</a>
-        <a href="index.html#ofertas" class="mobile__link">Ofertas</a>
-        <a href="index.html#opiniones" class="mobile__link">Opiniones</a>
+        <a href="habitaciones.html" class="mobile__link">Habitaciones</a>
         <a href="index.html#ubicacion" class="mobile__link">Ubicación</a>
+        <a href="index.html#opiniones" class="mobile__link">Opiniones</a>
         <a href="index.html#contacto" class="mobile__link">Contacto</a>
+
+        <!-- Redes sociales menú móvil -->
+        <div class="mobile__socials">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="mobile__social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="mobile__social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="mobile__social-link">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
 
         <a class="btn btn--primary mobile__cta" href="#" data-wa-context="Reserva desde menú móvil (Sobre Nosotros)">
           Reservar por WhatsApp
@@ -77,7 +112,7 @@
 
   <main>
     <!-- HERO estilo cinemático -->
-    <section class="hero" style="min-height: 82vh; padding-top: 78px;">
+    <section class="hero" style="min-height: 82vh; padding-top: 86px;">
       <div class="hero__media">
         <video class="hero__video" autoplay muted loop playsinline poster="assets/home/about/about_hero_poster.webp">
           <source src="assets/home/about/about_hero_video.mp4" type="video/mp4" />
@@ -175,7 +210,7 @@
       </div>
     </section>
 
-    <!-- FILOSOFÍA (sección premium con fondo tipo experiences) -->
+    <!-- FILOSOFÍA -->
     <section class="section section--image" id="filosofia" style="--bg:url('assets/home/about/about_philosophy_bg.webp');">
       <div class="section__veil"></div>
       <div class="container">
@@ -216,7 +251,7 @@
       </div>
     </section>
 
-    <!-- SERVICIOS (editorial + cards) -->
+    <!-- SERVICIOS -->
     <section class="section section--soft" id="servicios">
       <div class="container">
         <header class="section__head">
@@ -269,7 +304,7 @@
       </div>
     </section>
 
-    <!-- CONÉCTATE (cierre editorial) -->
+    <!-- CONÉCTATE -->
     <section class="section" id="conectate">
       <div class="container">
         <header class="section__head">
@@ -298,7 +333,7 @@
       </div>
     </section>
 
-    <!-- FOOTER (igual al home, con enlaces correctos) -->
+    <!-- FOOTER -->
     <section class="section section--footer" id="contacto">
       <div class="container footer">
         <div class="footer__col">
@@ -316,11 +351,11 @@
 
         <div class="footer__col">
           <div class="footer__title">Explorar</div>
-          <a class="footer__link" href="index.html#habitaciones">Habitaciones</a>
+          <a class="footer__link" href="index.html#top">Inicio</a>
+          <a class="footer__link" href="habitaciones.html">Habitaciones</a>
           <a class="footer__link" href="nosotros.html">Sobre Nosotros</a>
-          <a class="footer__link" href="index.html#ofertas">Ofertas</a>
           <a class="footer__link" href="index.html#ubicacion">Ubicación</a>
-          <a class="footer__link" href="#">Políticas</a>
+          <a class="footer__link" href="index.html#contacto">Contacto</a>
         </div>
 
         <div class="footer__col">
