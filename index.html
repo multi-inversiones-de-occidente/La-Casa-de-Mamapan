@@ -26,11 +26,18 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* Ajustes puntuales del header para evitar montajes */
+    /* Ajustes del header: dos filas reales */
     .header__inner{
+      min-height: 112px !important;
       padding-left: 28px !important;
-      padding-right: 470px !important;
-      min-height: 86px;
+      padding-right: 300px !important;
+      display: grid !important;
+      grid-template-columns: 1fr auto !important;
+      grid-template-rows: 54px 42px !important;
+      align-items: center !important;
+      column-gap: 16px !important;
+      row-gap: 4px !important;
+      position: relative !important;
     }
 
     .header__logo-fixed{
@@ -53,8 +60,26 @@
       object-fit: contain !important;
     }
 
+    .nav{
+      grid-column: 1 / 2 !important;
+      grid-row: 1 / 2 !important;
+      justify-self: start !important;
+      gap: 13px !important;
+      align-self: end !important;
+    }
+
+    .nav__link{
+      font-size: 12px !important;
+      letter-spacing: .025em !important;
+    }
+
     .header__actions{
-      right: 96px !important;
+      grid-column: 2 / 3 !important;
+      grid-row: 1 / 2 !important;
+      position: static !important;
+      transform: none !important;
+      justify-self: end !important;
+      align-self: center !important;
       gap: 10px !important;
       z-index: 20 !important;
     }
@@ -63,18 +88,57 @@
       margin-right: 4px !important;
     }
 
-    .nav{
-      gap: 13px !important;
+    .header__langbar{
+      grid-column: 1 / 2 !important;
+      grid-row: 2 / 3 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      justify-self: start !important;
+      align-self: start !important;
+      z-index: 10 !important;
     }
 
-    .nav__link{
-      font-size: 12px !important;
-      letter-spacing: .025em !important;
+    .lang-btn{
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.10);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background .2s ease, border-color .2s ease, transform .15s ease;
+    }
+
+    .lang-btn:hover{
+      transform: translateY(-1px);
+    }
+
+    .lang-btn[data-active="true"]{
+      background: rgba(255,255,255,.24);
+      border-color: rgba(255,255,255,.44);
+    }
+
+    .header--solid .lang-btn{
+      color: #1E1B16;
+      border-color: rgba(30,27,22,.12);
+      background: rgba(30,27,22,.05);
+    }
+
+    .header--solid .lang-btn[data-active="true"]{
+      background: rgba(31,111,74,.12);
+      border-color: rgba(31,111,74,.28);
     }
 
     @media (max-width: 1180px){
       .header__inner{
-        padding-right: 440px !important;
+        padding-right: 280px !important;
       }
       .nav{
         gap: 11px !important;
@@ -86,10 +150,7 @@
 
     @media (max-width: 1040px){
       .header__inner{
-        padding-right: 410px !important;
-      }
-      .header__actions{
-        right: 88px !important;
+        padding-right: 260px !important;
       }
       .nav{
         gap: 10px !important;
@@ -101,8 +162,11 @@
 
     @media (max-width: 980px){
       .header__inner{
+        min-height: 86px !important;
         padding-right: 86px !important;
         padding-left: 16px !important;
+        display: flex !important;
+        align-items: center !important;
         justify-content: flex-start !important;
       }
 
@@ -121,10 +185,14 @@
       }
 
       .header__actions{
-        right: 76px !important;
+        margin-left: auto !important;
       }
 
       .header__socials{
+        display: none !important;
+      }
+
+      .header__langbar{
         display: none !important;
       }
     }
@@ -143,10 +211,6 @@
       .header__logo-img{
         width: 47px !important;
         height: 47px !important;
-      }
-
-      .header__actions{
-        right: 62px !important;
       }
     }
   </style>
@@ -172,40 +236,15 @@
       </div>
 
       <nav class="nav" id="nav">
-        <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
-        <a href="#experiencias" class="nav__link">Experiencias</a>
-        <a href="habitaciones.html" class="nav__link">Habitaciones</a>
-        <a href="#ubicacion" class="nav__link">Ubicación</a>
-        <a href="#opiniones" class="nav__link">Opiniones</a>
-        <a href="#contacto" class="nav__link">Contacto</a>
+        <a href="nosotros.html" class="nav__link" data-i18n="nav_about">Sobre Nosotros</a>
+        <a href="#experiencias" class="nav__link" data-i18n="nav_experiences">Experiencias</a>
+        <a href="habitaciones.html" class="nav__link" data-i18n="nav_rooms">Habitaciones</a>
+        <a href="#ubicacion" class="nav__link" data-i18n="nav_location">Ubicación</a>
+        <a href="#opiniones" class="nav__link" data-i18n="nav_reviews">Opiniones</a>
+        <a href="#contacto" class="nav__link" data-i18n="nav_contact">Contacto</a>
       </nav>
 
       <div class="header__actions">
-        <!-- Idiomas -->
-        <div style="display:flex; align-items:center; gap:8px; margin-right:10px;">
-          <button
-            type="button"
-            class="lang-btn"
-            data-lang="es"
-            aria-label="Cambiar a español"
-            style="height:36px; padding:0 12px; border-radius:999px; border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.14); color:#fff; display:flex; align-items:center; gap:6px; cursor:pointer; font:inherit; font-size:12px; font-weight:600;"
-          >
-            <span aria-hidden="true">🇪🇸</span>
-            <span>ES</span>
-          </button>
-
-          <button
-            type="button"
-            class="lang-btn"
-            data-lang="en"
-            aria-label="Switch to English"
-            style="height:36px; padding:0 12px; border-radius:999px; border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.10); color:#fff; display:flex; align-items:center; gap:6px; cursor:pointer; font:inherit; font-size:12px; font-weight:600;"
-          >
-            <span aria-hidden="true">🇺🇸</span>
-            <span>EN</span>
-          </button>
-        </div>
-
         <!-- Redes sociales header -->
         <div class="header__socials">
           <a href="https://www.facebook.com/lacasademamapan/" target="_blank" rel="noopener" aria-label="Facebook" class="header__social-link">
@@ -223,21 +262,46 @@
           <span></span><span></span><span></span>
         </button>
 
-        <a class="btn btn--primary btn--sm header__cta" href="#" id="ctaHeaderWhatsApp" data-wa-context="Reserva desde el encabezado">
+        <a class="btn btn--primary btn--sm header__cta" href="#" id="ctaHeaderWhatsApp" data-wa-context="Reserva desde el encabezado" data-i18n="cta_whatsapp">
           Reservar por WhatsApp
         </a>
+      </div>
+
+      <!-- Barra de idiomas debajo del menú -->
+      <div class="header__langbar">
+        <button
+          type="button"
+          class="lang-btn"
+          data-lang="es"
+          data-active="true"
+          aria-label="Cambiar a español"
+        >
+          <span aria-hidden="true">🇪🇸</span>
+          <span>ES</span>
+        </button>
+
+        <button
+          type="button"
+          class="lang-btn"
+          data-lang="en"
+          data-active="false"
+          aria-label="Switch to English"
+        >
+          <span aria-hidden="true">🇺🇸</span>
+          <span>EN</span>
+        </button>
       </div>
     </div>
 
     <!-- Mobile menu -->
     <div class="mobile" id="mobileMenu" aria-hidden="true">
       <div class="mobile__panel">
-        <a href="nosotros.html" class="mobile__link">Sobre Nosotros</a>
-        <a href="#experiencias" class="mobile__link">Experiencias</a>
-        <a href="habitaciones.html" class="mobile__link">Habitaciones</a>
-        <a href="#ubicacion" class="mobile__link">Ubicación</a>
-        <a href="#opiniones" class="mobile__link">Opiniones</a>
-        <a href="#contacto" class="mobile__link">Contacto</a>
+        <a href="nosotros.html" class="mobile__link" data-i18n="nav_about">Sobre Nosotros</a>
+        <a href="#experiencias" class="mobile__link" data-i18n="nav_experiences">Experiencias</a>
+        <a href="habitaciones.html" class="mobile__link" data-i18n="nav_rooms">Habitaciones</a>
+        <a href="#ubicacion" class="mobile__link" data-i18n="nav_location">Ubicación</a>
+        <a href="#opiniones" class="mobile__link" data-i18n="nav_reviews">Opiniones</a>
+        <a href="#contacto" class="mobile__link" data-i18n="nav_contact">Contacto</a>
 
         <!-- Idiomas móvil -->
         <div style="display:flex; align-items:center; gap:10px; margin-top:16px; margin-bottom:10px;">
@@ -245,6 +309,7 @@
             type="button"
             class="lang-btn"
             data-lang="es"
+            data-active="true"
             aria-label="Cambiar a español"
             style="height:40px; padding:0 14px; border-radius:999px; border:1px solid rgba(30,27,22,.10); background:rgba(30,27,22,.05); color:#1E1B16; display:flex; align-items:center; gap:6px; cursor:pointer; font:inherit; font-size:12px; font-weight:600;"
           >
@@ -256,6 +321,7 @@
             type="button"
             class="lang-btn"
             data-lang="en"
+            data-active="false"
             aria-label="Switch to English"
             style="height:40px; padding:0 14px; border-radius:999px; border:1px solid rgba(30,27,22,.10); background:rgba(30,27,22,.05); color:#1E1B16; display:flex; align-items:center; gap:6px; cursor:pointer; font:inherit; font-size:12px; font-weight:600;"
           >
@@ -277,7 +343,7 @@
           </a>
         </div>
 
-        <a class="btn btn--primary mobile__cta" href="#" id="ctaMobileWhatsApp" data-wa-context="Reserva desde menú móvil">
+        <a class="btn btn--primary mobile__cta" href="#" id="ctaMobileWhatsApp" data-wa-context="Reserva desde menú móvil" data-i18n="cta_whatsapp">
           Reservar por WhatsApp
         </a>
       </div>
@@ -295,17 +361,17 @@
       </div>
 
       <div class="container hero__content">
-        <p class="hero__eyebrow reveal">Bienvenidos a</p>
-        <h1 class="hero__title reveal" style="transition-delay:.06s">La Casa de Mamapán</h1>
-        <p class="hero__subtitle reveal" style="transition-delay:.12s">
+        <p class="hero__eyebrow reveal" data-i18n="hero_eyebrow">Bienvenidos a</p>
+        <h1 class="hero__title reveal" style="transition-delay:.06s" data-i18n="hero_title">La Casa de Mamapán</h1>
+        <p class="hero__subtitle reveal" style="transition-delay:.12s" data-i18n="hero_subtitle">
           Hotel Boutique — descanso, calidez y experiencia en un solo lugar.
         </p>
 
         <div class="hero__cta reveal" style="transition-delay:.18s">
-          <a class="btn btn--primary" href="#" id="ctaHeroWhatsApp" data-wa-context="Reserva desde Hero">
+          <a class="btn btn--primary" href="#" id="ctaHeroWhatsApp" data-wa-context="Reserva desde Hero" data-i18n="cta_whatsapp">
             Reservar por WhatsApp
           </a>
-          <a class="btn btn--ghost" href="habitaciones.html">
+          <a class="btn btn--ghost" href="habitaciones.html" data-i18n="hero_rooms">
             Ver Habitaciones
           </a>
         </div>
@@ -320,8 +386,8 @@
     <section class="section" id="encanto">
       <div class="container">
         <header class="section__head">
-          <h2 class="section__title reveal">Descubre Nuestro Encanto</h2>
-          <p class="section__subtitle reveal" style="transition-delay:.06s">
+          <h2 class="section__title reveal" data-i18n="charm_title">Descubre Nuestro Encanto</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s" data-i18n="charm_subtitle">
             Hospédese con nosotros y viva una experiencia única.
           </p>
         </header>
@@ -332,9 +398,9 @@
               <img src="assets/home/highlights/home_highlight_rooms.webp" alt="Elegantes Habitaciones" loading="lazy" />
             </div>
             <div class="card__body">
-              <h3 class="card__title">Elegantes Habitaciones</h3>
-              <p class="card__text">Diseño acogedor, limpieza impecable y confort boutique.</p>
-              <a class="card__link" href="habitaciones.html">Ver habitaciones <span>→</span></a>
+              <h3 class="card__title" data-i18n="highlight_rooms_title">Elegantes Habitaciones</h3>
+              <p class="card__text" data-i18n="highlight_rooms_text">Diseño acogedor, limpieza impecable y confort boutique.</p>
+              <a class="card__link" href="habitaciones.html"><span data-i18n="highlight_rooms_link">Ver habitaciones</span> <span>→</span></a>
             </div>
           </article>
 
@@ -343,9 +409,9 @@
               <img src="assets/home/highlights/home_highlight_breakfast.webp" alt="Desayuno Incluido" loading="lazy" />
             </div>
             <div class="card__body">
-              <h3 class="card__title">Desayuno Incluido</h3>
-              <p class="card__text">Sabores locales y opciones frescas para empezar perfecto.</p>
-              <a class="card__link" href="#contacto">Consultar <span>→</span></a>
+              <h3 class="card__title" data-i18n="highlight_breakfast_title">Desayuno Incluido</h3>
+              <p class="card__text" data-i18n="highlight_breakfast_text">Sabores locales y opciones frescas para empezar perfecto.</p>
+              <a class="card__link" href="#contacto"><span data-i18n="highlight_breakfast_link">Consultar</span> <span>→</span></a>
             </div>
           </article>
 
@@ -354,9 +420,9 @@
               <img src="assets/home/highlights/home_highlight_about.webp" alt="Sobre Nosotros" loading="lazy" />
             </div>
             <div class="card__body">
-              <h3 class="card__title">Nosotros</h3>
-              <p class="card__text">Conozca la historia y la esencia que hacen único a La Casa de Mamapán.</p>
-              <a class="card__link" href="nosotros.html">Conocer más <span>→</span></a>
+              <h3 class="card__title" data-i18n="highlight_about_title">Nosotros</h3>
+              <p class="card__text" data-i18n="highlight_about_text">Conozca la historia y la esencia que hacen único a La Casa de Mamapán.</p>
+              <a class="card__link" href="nosotros.html"><span data-i18n="highlight_about_link">Conocer más</span> <span>→</span></a>
             </div>
           </article>
         </div>
@@ -367,36 +433,37 @@
     <section class="section section--soft" id="habitaciones">
       <div class="container">
         <header class="section__head">
-          <h2 class="section__title reveal">Nuestras Habitaciones</h2>
-          <p class="section__subtitle reveal" style="transition-delay:.06s">
+          <h2 class="section__title reveal" data-i18n="rooms_title">Nuestras Habitaciones</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s" data-i18n="rooms_subtitle">
             Descubra las opciones de hospedaje en La Casa de Mamapán y El Bosque de Mamapán.
           </p>
         </header>
 
         <header class="section__head" style="margin-top:30px;">
-          <h3 class="section__title reveal" style="font-size:clamp(24px,2.4vw,32px);">La Casa de Mamapán</h3>
+          <h3 class="section__title reveal" style="font-size:clamp(24px,2.4vw,32px);" data-i18n="house_title">La Casa de Mamapán</h3>
         </header>
 
         <div class="grid grid--3">
           <article class="room reveal">
             <div class="room__media">
               <img src="assets/home/rooms/room_suite_deluxe_cover.webp" alt="Habitación Individual - La Casa de Mamapán" loading="lazy" />
-              <span class="badge">La Casa</span>
+              <span class="badge" data-i18n="badge_house">La Casa</span>
             </div>
             <div class="room__body">
-              <h3 class="room__title">Individual</h3>
+              <h3 class="room__title" data-i18n="room_single">Individual</h3>
               <ul class="room__meta">
-                <li>1 cama</li>
+                <li data-i18n="meta_one_bed">1 cama</li>
                 <li>A/C</li>
-                <li>Baño privado</li>
+                <li data-i18n="meta_private_bath">Baño privado</li>
                 <li>WiFi</li>
               </ul>
               <div class="room__actions">
-                <a class="btn btn--outline btn--sm" href="#">Ver Detalles</a>
+                <a class="btn btn--outline btn--sm" href="#" data-i18n="details_btn">Ver Detalles</a>
                 <a class="btn btn--primary btn--sm"
                    href="#"
                    data-wa-room="Habitación Individual - La Casa de Mamapán"
-                   data-wa-context="Reserva Habitación Individual La Casa de Mamapán desde Home">
+                   data-wa-context="Reserva Habitación Individual La Casa de Mamapán desde Home"
+                   data-i18n="reserve_btn">
                   Reservar
                 </a>
               </div>
@@ -408,19 +475,20 @@
               <img src="assets/home/rooms/room_double_cover.webp" alt="Habitación Doble - La Casa de Mamapán" loading="lazy" />
             </div>
             <div class="room__body">
-              <h3 class="room__title">Doble</h3>
+              <h3 class="room__title" data-i18n="room_double">Doble</h3>
               <ul class="room__meta">
-                <li>2 camas</li>
+                <li data-i18n="meta_two_beds">2 camas</li>
                 <li>A/C</li>
                 <li>TV</li>
                 <li>WiFi</li>
               </ul>
               <div class="room__actions">
-                <a class="btn btn--outline btn--sm" href="#">Ver Detalles</a>
+                <a class="btn btn--outline btn--sm" href="#" data-i18n="details_btn">Ver Detalles</a>
                 <a class="btn btn--primary btn--sm"
                    href="#"
                    data-wa-room="Habitación Doble - La Casa de Mamapán"
-                   data-wa-context="Reserva Habitación Doble La Casa de Mamapán desde Home">
+                   data-wa-context="Reserva Habitación Doble La Casa de Mamapán desde Home"
+                   data-i18n="reserve_btn">
                   Reservar
                 </a>
               </div>
@@ -432,19 +500,20 @@
               <img src="assets/home/rooms/room_family_cover.webp" alt="Habitación Doble Deluxe - La Casa de Mamapán" loading="lazy" />
             </div>
             <div class="room__body">
-              <h3 class="room__title">Doble Deluxe</h3>
+              <h3 class="room__title" data-i18n="room_double_deluxe">Doble Deluxe</h3>
               <ul class="room__meta">
-                <li>Mayor confort</li>
+                <li data-i18n="meta_more_comfort">Mayor confort</li>
                 <li>A/C</li>
-                <li>Baño privado</li>
+                <li data-i18n="meta_private_bath">Baño privado</li>
                 <li>WiFi</li>
               </ul>
               <div class="room__actions">
-                <a class="btn btn--outline btn--sm" href="#">Ver Detalles</a>
+                <a class="btn btn--outline btn--sm" href="#" data-i18n="details_btn">Ver Detalles</a>
                 <a class="btn btn--primary btn--sm"
                    href="#"
                    data-wa-room="Habitación Doble Deluxe - La Casa de Mamapán"
-                   data-wa-context="Reserva Habitación Doble Deluxe La Casa de Mamapán desde Home">
+                   data-wa-context="Reserva Habitación Doble Deluxe La Casa de Mamapán desde Home"
+                   data-i18n="reserve_btn">
                   Reservar
                 </a>
               </div>
@@ -453,29 +522,30 @@
         </div>
 
         <header class="section__head" style="margin-top:42px;">
-          <h3 class="section__title reveal" style="font-size:clamp(24px,2.4vw,32px);">El Bosque de Mamapán</h3>
+          <h3 class="section__title reveal" style="font-size:clamp(24px,2.4vw,32px);" data-i18n="forest_title">El Bosque de Mamapán</h3>
         </header>
 
         <div class="grid grid--3">
           <article class="room reveal">
             <div class="room__media">
               <img src="assets/home/rooms/bosque_room_individual_cover.webp" alt="Habitación Individual - El Bosque de Mamapán" loading="lazy" />
-              <span class="badge">El Bosque</span>
+              <span class="badge" data-i18n="badge_forest">El Bosque</span>
             </div>
             <div class="room__body">
-              <h3 class="room__title">Individual</h3>
+              <h3 class="room__title" data-i18n="room_single">Individual</h3>
               <ul class="room__meta">
-                <li>1 cama</li>
+                <li data-i18n="meta_one_bed">1 cama</li>
                 <li>A/C</li>
-                <li>Baño privado</li>
+                <li data-i18n="meta_private_bath">Baño privado</li>
                 <li>WiFi</li>
               </ul>
               <div class="room__actions">
-                <a class="btn btn--outline btn--sm" href="#">Ver Detalles</a>
+                <a class="btn btn--outline btn--sm" href="#" data-i18n="details_btn">Ver Detalles</a>
                 <a class="btn btn--primary btn--sm"
                    href="#"
                    data-wa-room="Habitación Individual - El Bosque de Mamapán"
-                   data-wa-context="Reserva Habitación Individual El Bosque de Mamapán desde Home">
+                   data-wa-context="Reserva Habitación Individual El Bosque de Mamapán desde Home"
+                   data-i18n="reserve_btn">
                   Reservar
                 </a>
               </div>
@@ -487,19 +557,20 @@
               <img src="assets/home/rooms/bosque_room_double_cover.webp" alt="Habitación Doble - El Bosque de Mamapán" loading="lazy" />
             </div>
             <div class="room__body">
-              <h3 class="room__title">Doble</h3>
+              <h3 class="room__title" data-i18n="room_double">Doble</h3>
               <ul class="room__meta">
-                <li>2 camas</li>
+                <li data-i18n="meta_two_beds">2 camas</li>
                 <li>A/C</li>
                 <li>TV</li>
                 <li>WiFi</li>
               </ul>
               <div class="room__actions">
-                <a class="btn btn--outline btn--sm" href="#">Ver Detalles</a>
+                <a class="btn btn--outline btn--sm" href="#" data-i18n="details_btn">Ver Detalles</a>
                 <a class="btn btn--primary btn--sm"
                    href="#"
                    data-wa-room="Habitación Doble - El Bosque de Mamapán"
-                   data-wa-context="Reserva Habitación Doble El Bosque de Mamapán desde Home">
+                   data-wa-context="Reserva Habitación Doble El Bosque de Mamapán desde Home"
+                   data-i18n="reserve_btn">
                   Reservar
                 </a>
               </div>
@@ -511,19 +582,20 @@
               <img src="assets/home/rooms/bosque_room_double_deluxe_cover.webp" alt="Habitación Doble Deluxe - El Bosque de Mamapán" loading="lazy" />
             </div>
             <div class="room__body">
-              <h3 class="room__title">Doble Deluxe</h3>
+              <h3 class="room__title" data-i18n="room_double_deluxe">Doble Deluxe</h3>
               <ul class="room__meta">
-                <li>Mayor confort</li>
+                <li data-i18n="meta_more_comfort">Mayor confort</li>
                 <li>A/C</li>
-                <li>Baño privado</li>
+                <li data-i18n="meta_private_bath">Baño privado</li>
                 <li>WiFi</li>
               </ul>
               <div class="room__actions">
-                <a class="btn btn--outline btn--sm" href="#">Ver Detalles</a>
+                <a class="btn btn--outline btn--sm" href="#" data-i18n="details_btn">Ver Detalles</a>
                 <a class="btn btn--primary btn--sm"
                    href="#"
                    data-wa-room="Habitación Doble Deluxe - El Bosque de Mamapán"
-                   data-wa-context="Reserva Habitación Doble Deluxe El Bosque de Mamapán desde Home">
+                   data-wa-context="Reserva Habitación Doble Deluxe El Bosque de Mamapán desde Home"
+                   data-i18n="reserve_btn">
                   Reservar
                 </a>
               </div>
@@ -532,7 +604,7 @@
         </div>
 
         <div class="center mt-24 reveal">
-          <a class="btn btn--ghost" href="habitaciones.html">Ver todas las habitaciones</a>
+          <a class="btn btn--ghost" href="habitaciones.html" data-i18n="see_all_rooms">Ver todas las habitaciones</a>
         </div>
       </div>
     </section>
@@ -542,48 +614,48 @@
       <div class="section__veil"></div>
       <div class="container">
         <header class="section__head section__head--onimage">
-          <h2 class="section__title section__title--light reveal">Experiencias</h2>
-          <p class="section__subtitle section__subtitle--light reveal" style="transition-delay:.06s">
+          <h2 class="section__title section__title--light reveal" data-i18n="exp_title">Experiencias</h2>
+          <p class="section__subtitle section__subtitle--light reveal" style="transition-delay:.06s" data-i18n="exp_subtitle">
             Descubra las experiencias que puede vivir tanto en La Casa de Mamapán como en El Bosque de Mamapán.
           </p>
         </header>
 
         <header class="section__head section__head--onimage" style="margin-top:24px;">
-          <h3 class="section__title section__title--light reveal" style="font-size:clamp(24px,2.4vw,32px);">La Casa de Mamapán</h3>
+          <h3 class="section__title section__title--light reveal" style="font-size:clamp(24px,2.4vw,32px);" data-i18n="house_title">La Casa de Mamapán</h3>
         </header>
 
         <div class="icons reveal" style="transition-delay:.12s">
           <div class="iconcard">
             <div class="iconcard__icon">🧭</div>
-            <div class="iconcard__label">Tours y Actividades</div>
+            <div class="iconcard__label" data-i18n="exp_tours">Tours y Actividades</div>
           </div>
           <div class="iconcard">
             <div class="iconcard__icon">🍽️</div>
-            <div class="iconcard__label">Gastronomía</div>
+            <div class="iconcard__label" data-i18n="exp_gastronomy">Gastronomía</div>
           </div>
         </div>
 
         <header class="section__head section__head--onimage" style="margin-top:34px;">
-          <h3 class="section__title section__title--light reveal" style="font-size:clamp(24px,2.4vw,32px);">El Bosque de Mamapán</h3>
+          <h3 class="section__title section__title--light reveal" style="font-size:clamp(24px,2.4vw,32px);" data-i18n="forest_title">El Bosque de Mamapán</h3>
         </header>
 
         <div class="icons reveal" style="transition-delay:.18s">
           <div class="iconcard">
             <div class="iconcard__icon">🌿</div>
-            <div class="iconcard__label">Senderos</div>
+            <div class="iconcard__label" data-i18n="exp_trails">Senderos</div>
           </div>
           <div class="iconcard">
             <div class="iconcard__icon">🕯️</div>
-            <div class="iconcard__label">Rituales</div>
+            <div class="iconcard__label" data-i18n="exp_rituals">Rituales</div>
           </div>
           <div class="iconcard">
             <div class="iconcard__icon">✨</div>
-            <div class="iconcard__label">Eventos</div>
+            <div class="iconcard__label" data-i18n="exp_events">Eventos</div>
           </div>
         </div>
 
         <div class="center mt-24 reveal" style="transition-delay:.24s">
-          <a class="btn btn--ghost btn--ghost-light" href="#" data-wa-context="Consulta de experiencias desde Home">
+          <a class="btn btn--ghost btn--ghost-light" href="#" data-wa-context="Consulta de experiencias desde Home" data-i18n="exp_whatsapp">
             Consultar experiencias por WhatsApp
           </a>
         </div>
@@ -594,8 +666,8 @@
     <section class="section section--soft" id="opiniones">
       <div class="container">
         <header class="section__head">
-          <h2 class="section__title reveal">Opiniones de Nuestros Huéspedes</h2>
-          <p class="section__subtitle reveal" style="transition-delay:.06s">
+          <h2 class="section__title reveal" data-i18n="reviews_title">Opiniones de Nuestros Huéspedes</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s" data-i18n="reviews_subtitle">
             Lo que más nos importa es que su estadía se sienta perfecta.
           </p>
         </header>
@@ -609,7 +681,7 @@
                 <div class="review__stars" aria-label="5 estrellas">★★★★★</div>
               </div>
             </div>
-            <p class="review__text">
+            <p class="review__text" data-i18n="review_1">
               Atención increíble, todo limpio y súper acogedor. Volvería sin pensarlo.
             </p>
           </article>
@@ -622,7 +694,7 @@
                 <div class="review__stars" aria-label="5 estrellas">★★★★★</div>
               </div>
             </div>
-            <p class="review__text">
+            <p class="review__text" data-i18n="review_2">
               Excelente ubicación, ambiente tranquilo y el desayuno buenísimo.
             </p>
           </article>
@@ -635,14 +707,14 @@
                 <div class="review__stars" aria-label="5 estrellas">★★★★★</div>
               </div>
             </div>
-            <p class="review__text">
+            <p class="review__text" data-i18n="review_3">
               Perfecto para descansar, las habitaciones son hermosas y cómodas.
             </p>
           </article>
         </div>
 
         <div class="center mt-24 reveal">
-          <a class="btn btn--ghost" href="#">Ver más reseñas</a>
+          <a class="btn btn--ghost" href="#" data-i18n="more_reviews">Ver más reseñas</a>
         </div>
       </div>
     </section>
@@ -651,8 +723,8 @@
     <section class="section" id="ubicacion">
       <div class="container">
         <header class="section__head">
-          <h2 class="section__title reveal">Ubicaciones</h2>
-          <p class="section__subtitle reveal" style="transition-delay:.06s">
+          <h2 class="section__title reveal" data-i18n="locations_title">Ubicaciones</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s" data-i18n="locations_subtitle">
             Conozca la ubicación de La Casa de Mamapán y El Bosque de Mamapán.
           </p>
         </header>
@@ -669,9 +741,9 @@
               </iframe>
             </div>
             <div class="card__body">
-              <h3 class="card__title">La Casa de Mamapán</h3>
-              <p class="card__text">Ubicación exacta de La Casa de Mamapán para llegar fácilmente desde Google Maps.</p>
-              <a class="card__link" href="https://maps.app.goo.gl/uKJSKsHNNEFihtuW6?g_st=awb" target="_blank" rel="noopener">Abrir ubicación exacta <span>→</span></a>
+              <h3 class="card__title" data-i18n="house_title">La Casa de Mamapán</h3>
+              <p class="card__text" data-i18n="location_house_text">Ubicación exacta de La Casa de Mamapán para llegar fácilmente desde Google Maps.</p>
+              <a class="card__link" href="https://maps.app.goo.gl/uKJSKsHNNEFihtuW6?g_st=awb" target="_blank" rel="noopener"><span data-i18n="open_exact_location">Abrir ubicación exacta</span> <span>→</span></a>
             </div>
           </article>
 
@@ -686,9 +758,9 @@
               </iframe>
             </div>
             <div class="card__body">
-              <h3 class="card__title">El Bosque de Mamapán</h3>
-              <p class="card__text">Ubicación exacta de El Bosque de Mamapán para una llegada directa y precisa.</p>
-              <a class="card__link" href="https://maps.app.goo.gl/N3TDgFcxoWpQ6nX88?g_st=awb" target="_blank" rel="noopener">Abrir ubicación exacta <span>→</span></a>
+              <h3 class="card__title" data-i18n="forest_title">El Bosque de Mamapán</h3>
+              <p class="card__text" data-i18n="location_forest_text">Ubicación exacta de El Bosque de Mamapán para una llegada directa y precisa.</p>
+              <a class="card__link" href="https://maps.app.goo.gl/N3TDgFcxoWpQ6nX88?g_st=awb" target="_blank" rel="noopener"><span data-i18n="open_exact_location">Abrir ubicación exacta</span> <span>→</span></a>
             </div>
           </article>
         </div>
@@ -721,8 +793,8 @@
 
           <div style="position:relative; z-index:2;">
             <header class="section__head" style="margin-bottom:22px;">
-              <h2 class="section__title reveal">Contáctenos</h2>
-              <p class="section__subtitle reveal" style="transition-delay:.06s; max-width:760px;">
+              <h2 class="section__title reveal" data-i18n="form_title">Contáctenos</h2>
+              <p class="section__subtitle reveal" style="transition-delay:.06s; max-width:760px;" data-i18n="form_subtitle">
                 Déjenos sus datos y su mensaje. Esta sección fue integrada para mantener una estética moderna, elegante y funcional dentro de la experiencia del sitio.
               </p>
             </header>
@@ -740,12 +812,13 @@
               "
             >
               <div style="display:flex; flex-direction:column; gap:8px;">
-                <label for="nombre" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Nombre</label>
+                <label for="nombre" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;" data-i18n="form_name">Nombre</label>
                 <input
                   type="text"
                   id="nombre"
                   name="Nombre"
                   placeholder="Ingrese su nombre"
+                  data-i18n-placeholder="form_name_ph"
                   required
                   style="
                     width:100%;
@@ -764,12 +837,13 @@
               </div>
 
               <div style="display:flex; flex-direction:column; gap:8px;">
-                <label for="apellido" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Apellido</label>
+                <label for="apellido" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;" data-i18n="form_lastname">Apellido</label>
                 <input
                   type="text"
                   id="apellido"
                   name="Apellido"
                   placeholder="Ingrese su apellido"
+                  data-i18n-placeholder="form_lastname_ph"
                   required
                   style="
                     width:100%;
@@ -788,12 +862,13 @@
               </div>
 
               <div style="display:flex; flex-direction:column; gap:8px;">
-                <label for="email" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Email</label>
+                <label for="email" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;" data-i18n="form_email">Email</label>
                 <input
                   type="email"
                   id="email"
                   name="Email"
                   placeholder="Ingrese su email"
+                  data-i18n-placeholder="form_email_ph"
                   required
                   style="
                     width:100%;
@@ -812,12 +887,13 @@
               </div>
 
               <div style="display:flex; flex-direction:column; gap:8px;">
-                <label for="telefono" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Teléfono</label>
+                <label for="telefono" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;" data-i18n="form_phone">Teléfono</label>
                 <input
                   type="tel"
                   id="telefono"
                   name="Telefono"
                   placeholder="Ingrese su teléfono"
+                  data-i18n-placeholder="form_phone_ph"
                   required
                   style="
                     width:100%;
@@ -836,11 +912,12 @@
               </div>
 
               <div style="display:flex; flex-direction:column; gap:8px; grid-column:1 / -1;">
-                <label for="mensaje" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Mensaje</label>
+                <label for="mensaje" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;" data-i18n="form_message">Mensaje</label>
                 <textarea
                   id="mensaje"
                   name="Mensaje"
                   placeholder="Escriba su mensaje"
+                  data-i18n-placeholder="form_message_ph"
                   rows="6"
                   required
                   style="
@@ -862,6 +939,7 @@
               <div style="grid-column:1 / -1; display:flex; justify-content:center; margin-top:6px;">
                 <button
                   type="submit"
+                  data-i18n="form_submit"
                   style="
                     min-width:220px;
                     height:52px;
@@ -892,7 +970,7 @@
       <div class="container footer">
         <div class="footer__col">
           <div class="footer__brand">La Casa de Mamapán</div>
-          <p class="footer__text">Hotel Boutique — más cerca de ti.</p>
+          <p class="footer__text" data-i18n="footer_tagline">Hotel Boutique — más cerca de ti.</p>
 
           <!-- Redes sociales footer -->
           <div style="display:flex; align-items:center; gap:12px; margin-top:16px;">
@@ -912,32 +990,32 @@
         </div>
 
         <div class="footer__col">
-          <div class="footer__title">Contacto</div>
-          <p class="footer__text">Teléfono: <span class="mono">+503 2413-4747</span></p>
+          <div class="footer__title" data-i18n="nav_contact">Contacto</div>
+          <p class="footer__text"><span data-i18n="footer_phone">Teléfono</span>: <span class="mono">+503 2413-4747</span></p>
           <p class="footer__text">WhatsApp Business: <span class="mono" id="waDisplay">+503 2413-4747</span></p>
-          <p class="footer__text">Correo: <span class="mono">mamapan-ahuachapan@hotmail.com</span></p>
-          <p class="footer__text">Reservaciones: <span class="mono">reservaciones@mamapan.travel</span></p>
-          <p class="footer__text">Horario: 7:00 a.m. – 10:00 p.m.</p>
+          <p class="footer__text"><span data-i18n="footer_email">Correo</span>: <span class="mono">mamapan-ahuachapan@hotmail.com</span></p>
+          <p class="footer__text"><span data-i18n="footer_booking">Reservaciones</span>: <span class="mono">reservaciones@mamapan.travel</span></p>
+          <p class="footer__text"><span data-i18n="footer_hours">Horario</span>: <span class="mono">7:00 a.m. – 10:00 p.m.</span></p>
         </div>
 
         <div class="footer__col">
-          <div class="footer__title">Explorar</div>
-          <a class="footer__link" href="nosotros.html">Sobre Nosotros</a>
-          <a class="footer__link" href="#experiencias">Experiencias</a>
-          <a class="footer__link" href="habitaciones.html">Habitaciones</a>
-          <a class="footer__link" href="#ubicacion">Ubicación</a>
-          <a class="footer__link" href="#opiniones">Opiniones</a>
-          <a class="footer__link" href="#contacto">Contacto</a>
+          <div class="footer__title" data-i18n="footer_explore">Explorar</div>
+          <a class="footer__link" href="nosotros.html" data-i18n="nav_about">Sobre Nosotros</a>
+          <a class="footer__link" href="#experiencias" data-i18n="nav_experiences">Experiencias</a>
+          <a class="footer__link" href="habitaciones.html" data-i18n="nav_rooms">Habitaciones</a>
+          <a class="footer__link" href="#ubicacion" data-i18n="nav_location">Ubicación</a>
+          <a class="footer__link" href="#opiniones" data-i18n="nav_reviews">Opiniones</a>
+          <a class="footer__link" href="#contacto" data-i18n="nav_contact">Contacto</a>
         </div>
 
         <div class="footer__col">
-          <div class="footer__title">Reservas</div>
-          <p class="footer__text">Reserve rápido y directo con la dueña.</p>
-          <a class="btn btn--primary btn--sm" href="#" data-wa-context="Reserva desde Footer">Reservar por WhatsApp</a>
+          <div class="footer__title" data-i18n="footer_bookings">Reservas</div>
+          <p class="footer__text" data-i18n="footer_book_text">Reserve rápido y directo con la dueña.</p>
+          <a class="btn btn--primary btn--sm" href="#" data-wa-context="Reserva desde Footer" data-i18n="cta_whatsapp">Reservar por WhatsApp</a>
         </div>
 
         <div class="footer__bottom">
-          <span>© <span id="year"></span> La Casa de Mamapán — Todos los derechos reservados.</span>
+          <span>© <span id="year"></span> La Casa de Mamapán — <span data-i18n="footer_rights">Todos los derechos reservados.</span></span>
         </div>
       </div>
     </section>
@@ -946,7 +1024,7 @@
   <!-- Floating WhatsApp -->
   <a class="wa-float" href="#" id="waFloat" aria-label="Contactar por WhatsApp" data-wa-context="Botón flotante">
     <span class="wa-float__icon" aria-hidden="true">✆</span>
-    <span class="wa-float__tip">Reservar por WhatsApp</span>
+    <span class="wa-float__tip" data-i18n="cta_whatsapp">Reservar por WhatsApp</span>
   </a>
 
   <script src="main.js" defer></script>
