@@ -519,8 +519,200 @@
       </div>
     </section>
 
+    <!-- SECTION: FORMULARIO -->
+    <section class="section section--soft" id="contacto">
+      <div class="container">
+        <div style="
+          position:relative;
+          overflow:hidden;
+          border-radius:28px;
+          background:
+            radial-gradient(circle at top left, rgba(200,164,106,.18), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(31,111,74,.16), transparent 32%),
+            rgba(255,255,255,.72);
+          border:1px solid rgba(30,27,22,.10);
+          box-shadow: 0 22px 60px rgba(0,0,0,.10);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          padding: clamp(22px, 4vw, 42px);
+        ">
+          <div style="
+            position:absolute;
+            inset:0;
+            pointer-events:none;
+            background: linear-gradient(135deg, rgba(255,255,255,.18), transparent 35%, rgba(255,255,255,.08));
+          "></div>
+
+          <div style="position:relative; z-index:2;">
+            <header class="section__head" style="margin-bottom:22px;">
+              <h2 class="section__title reveal">Contáctenos</h2>
+              <p class="section__subtitle reveal" style="transition-delay:.06s; max-width:760px;">
+                Déjenos sus datos y su mensaje. Esta sección fue integrada para mantener una estética moderna, elegante y funcional dentro de la experiencia del sitio.
+              </p>
+            </header>
+
+            <form
+              action="mailto:tu-correo@dominio.com"
+              method="post"
+              enctype="text/plain"
+              style="
+                display:grid;
+                grid-template-columns: repeat(2, minmax(0,1fr));
+                gap:16px;
+                max-width:980px;
+                margin:0 auto;
+              "
+            >
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <label for="nombre" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="Nombre"
+                  placeholder="Ingrese su nombre"
+                  required
+                  style="
+                    width:100%;
+                    height:52px;
+                    border-radius:16px;
+                    border:1px solid rgba(30,27,22,.10);
+                    background:rgba(255,255,255,.82);
+                    padding:0 16px;
+                    font-family:Poppins, sans-serif;
+                    font-size:14px;
+                    color:#1E1B16;
+                    outline:none;
+                    box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+                  "
+                />
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <label for="apellido" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Apellido</label>
+                <input
+                  type="text"
+                  id="apellido"
+                  name="Apellido"
+                  placeholder="Ingrese su apellido"
+                  required
+                  style="
+                    width:100%;
+                    height:52px;
+                    border-radius:16px;
+                    border:1px solid rgba(30,27,22,.10);
+                    background:rgba(255,255,255,.82);
+                    padding:0 16px;
+                    font-family:Poppins, sans-serif;
+                    font-size:14px;
+                    color:#1E1B16;
+                    outline:none;
+                    box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+                  "
+                />
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <label for="email" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="Email"
+                  placeholder="Ingrese su email"
+                  required
+                  style="
+                    width:100%;
+                    height:52px;
+                    border-radius:16px;
+                    border:1px solid rgba(30,27,22,.10);
+                    background:rgba(255,255,255,.82);
+                    padding:0 16px;
+                    font-family:Poppins, sans-serif;
+                    font-size:14px;
+                    color:#1E1B16;
+                    outline:none;
+                    box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+                  "
+                />
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <label for="telefono" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Teléfono</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="Telefono"
+                  placeholder="Ingrese su teléfono"
+                  required
+                  style="
+                    width:100%;
+                    height:52px;
+                    border-radius:16px;
+                    border:1px solid rgba(30,27,22,.10);
+                    background:rgba(255,255,255,.82);
+                    padding:0 16px;
+                    font-family:Poppins, sans-serif;
+                    font-size:14px;
+                    color:#1E1B16;
+                    outline:none;
+                    box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+                  "
+                />
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:8px; grid-column:1 / -1;">
+                <label for="mensaje" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;">Mensaje</label>
+                <textarea
+                  id="mensaje"
+                  name="Mensaje"
+                  placeholder="Escriba su mensaje"
+                  rows="6"
+                  required
+                  style="
+                    width:100%;
+                    border-radius:18px;
+                    border:1px solid rgba(30,27,22,.10);
+                    background:rgba(255,255,255,.82);
+                    padding:16px;
+                    font-family:Poppins, sans-serif;
+                    font-size:14px;
+                    color:#1E1B16;
+                    outline:none;
+                    resize:vertical;
+                    box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+                  "
+                ></textarea>
+              </div>
+
+              <div style="grid-column:1 / -1; display:flex; justify-content:center; margin-top:6px;">
+                <button
+                  type="submit"
+                  style="
+                    min-width:220px;
+                    height:52px;
+                    border:none;
+                    border-radius:999px;
+                    background:linear-gradient(135deg, #1F6F4A, #195C3E);
+                    color:#fff;
+                    font-family:Poppins, sans-serif;
+                    font-size:14px;
+                    font-weight:600;
+                    letter-spacing:.02em;
+                    cursor:pointer;
+                    box-shadow: 0 16px 36px rgba(31,111,74,.24);
+                    transition:transform .15s ease, box-shadow .15s ease;
+                  "
+                >
+                  Enviar al correo
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACTO (footer target) -->
-    <section class="section section--footer" id="contacto">
+    <section class="section section--footer" id="footer-contacto">
       <div class="container footer">
         <div class="footer__col">
           <div class="footer__brand">La Casa de Mamapán</div>
