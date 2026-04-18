@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#F5F0E8" />
 
   <title>Habitaciones | La Casa de Mamapán</title>
-  <meta name="description" content="Conozca nuestras habitaciones — diseño boutique, confort y estilo colonial en Ahuachapán. Reserve por WhatsApp." />
+  <meta name="description" content="Conozca nuestras habitaciones en La Casa de Mamapán y El Bosque de Mamapán — diseño boutique, confort y experiencias únicas. Reserve por WhatsApp." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Habitaciones | La Casa de Mamapán" />
@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -27,22 +28,42 @@
   <!-- Header -->
   <header class="header header--solid" id="siteHeader">
     <div class="container header__inner">
-      <a class="brand" href="index.html#top" aria-label="Ir al inicio">
-        <img src="assets/brand/Logo La casa de mamapán.jpg.jpeg" alt="La Casa de Mamapán" class="brand__logo brand__logo--dark" />
-      </a>
+
+      <!-- Logo fijo dentro del header -->
+      <div class="header__logo-fixed">
+        <a href="index.html#top" aria-label="Ir al inicio" class="header__logo-link">
+          <img
+            src="assets/brand/Logo La casa de mamapán.jpg.jpeg"
+            alt="La Casa de Mamapán"
+            class="header__logo-img"
+          />
+        </a>
+      </div>
 
       <nav class="nav" id="nav">
-        <a href="index.html#encanto" class="nav__link">Encanto</a>
-        <a href="habitaciones.html" class="nav__link">Habitaciones</a>
+        <a href="index.html#top" class="nav__link">Inicio</a>
         <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
         <a href="index.html#experiencias" class="nav__link">Experiencias</a>
-        <a href="index.html#ofertas" class="nav__link">Ofertas</a>
-        <a href="index.html#opiniones" class="nav__link">Opiniones</a>
+        <a href="habitaciones.html" class="nav__link">Habitaciones</a>
         <a href="index.html#ubicacion" class="nav__link">Ubicación</a>
+        <a href="index.html#opiniones" class="nav__link">Opiniones</a>
         <a href="index.html#contacto" class="nav__link">Contacto</a>
       </nav>
 
       <div class="header__actions">
+        <!-- Redes sociales header -->
+        <div class="header__socials">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="header__social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="header__social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="header__social-link">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+
         <button class="iconbtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
@@ -56,14 +77,26 @@
     <!-- Mobile -->
     <div class="mobile" id="mobileMenu" aria-hidden="true">
       <div class="mobile__panel">
-        <a href="index.html#encanto" class="mobile__link">Encanto</a>
-        <a href="habitaciones.html" class="mobile__link">Habitaciones</a>
+        <a href="index.html#top" class="mobile__link">Inicio</a>
         <a href="nosotros.html" class="mobile__link">Sobre Nosotros</a>
         <a href="index.html#experiencias" class="mobile__link">Experiencias</a>
-        <a href="index.html#ofertas" class="mobile__link">Ofertas</a>
-        <a href="index.html#opiniones" class="mobile__link">Opiniones</a>
+        <a href="habitaciones.html" class="mobile__link">Habitaciones</a>
         <a href="index.html#ubicacion" class="mobile__link">Ubicación</a>
+        <a href="index.html#opiniones" class="mobile__link">Opiniones</a>
         <a href="index.html#contacto" class="mobile__link">Contacto</a>
+
+        <!-- Redes sociales menú móvil -->
+        <div class="mobile__socials">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="mobile__social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="mobile__social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="mobile__social-link">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
 
         <a class="btn btn--primary mobile__cta" href="#" data-wa-context="Reserva desde menú móvil (Habitaciones)">
           Reservar por WhatsApp
@@ -74,7 +107,7 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero" style="min-height: 72vh; padding-top: 78px;">
+    <section class="hero" style="min-height: 72vh; padding-top: 86px;">
       <div class="hero__media">
         <video class="hero__video" autoplay muted loop playsinline poster="assets/habitaciones/hero/rooms_hero_poster.webp">
           <source src="assets/habitaciones/hero/rooms_hero_video.mp4" type="video/mp4" />
@@ -86,7 +119,7 @@
         <p class="hero__eyebrow reveal">Diseño boutique</p>
         <h1 class="hero__title reveal" style="transition-delay:.06s">Habitaciones</h1>
         <p class="hero__subtitle reveal" style="transition-delay:.12s; max-width: 760px;">
-          Espacios con carácter, comodidad y un ambiente único. Elija su habitación ideal y reserve directo por WhatsApp.
+          Descubra las habitaciones de La Casa de Mamapán y El Bosque de Mamapán. Espacios diseñados para brindar descanso, comodidad y una experiencia única.
         </p>
 
         <div class="hero__cta reveal" style="transition-delay:.18s">
@@ -110,7 +143,7 @@
         <header class="section__head">
           <h2 class="section__title reveal">Elija su espacio ideal</h2>
           <p class="section__subtitle reveal" style="transition-delay:.06s;">
-            Cada habitación está pensada para brindar descanso auténtico con estilo colonial y detalles modernos.
+            Conozca las opciones disponibles en nuestros dos espacios: La Casa de Mamapán y El Bosque de Mamapán.
           </p>
         </header>
 
@@ -129,30 +162,37 @@
           </div>
           <div class="iconcard" style="background: rgba(30,27,22,.04); border-color: rgba(30,27,22,.10);">
             <div class="iconcard__icon">☕</div>
-            <div class="iconcard__label" style="color: rgba(30,27,22,.85);">Café gourmet</div>
+            <div class="iconcard__label" style="color: rgba(30,27,22,.85);">Comodidad</div>
           </div>
         </div>
 
-        <!-- Cards de habitaciones -->
+        <!-- LA CASA DE MAMAPÁN -->
+        <header class="section__head" style="margin-top:34px;">
+          <h3 class="section__title reveal" style="font-size:clamp(24px,2.4vw,32px);">La Casa de Mamapán</h3>
+          <p class="section__subtitle reveal" style="transition-delay:.06s;">
+            Habitaciones boutique con estilo acogedor y atención cercana.
+          </p>
+        </header>
+
         <div class="grid grid--3" style="margin-top:18px;">
           <article class="room reveal">
             <div class="room__media">
-              <img src="assets/habitaciones/rooms/suite_deluxe_cover.webp" alt="Suite Deluxe" loading="lazy" />
-              <span class="badge">Más solicitada</span>
+              <img src="assets/habitaciones/rooms/suite_deluxe_cover.webp" alt="Habitación Individual - La Casa de Mamapán" loading="lazy" />
+              <span class="badge">La Casa</span>
             </div>
             <div class="room__body">
-              <h3 class="room__title">Suite Deluxe</h3>
+              <h3 class="room__title">Individual</h3>
               <ul class="room__meta">
-                <li>Cama King</li>
+                <li>1 cama</li>
                 <li>Baño privado</li>
                 <li>A/C</li>
                 <li>WiFi</li>
               </ul>
               <div class="room__actions">
-                <a class="btn btn--outline btn--sm" href="habitacion-suite.html">Ver detalles</a>
+                <a class="btn btn--outline btn--sm" href="#">Ver detalles</a>
                 <a class="btn btn--primary btn--sm" href="#"
-                   data-wa-room="Suite Deluxe"
-                   data-wa-context="Reserva Suite Deluxe desde Habitaciones">
+                   data-wa-room="Habitación Individual - La Casa de Mamapán"
+                   data-wa-context="Reserva Habitación Individual La Casa de Mamapán desde Habitaciones">
                   Reservar
                 </a>
               </div>
@@ -161,10 +201,10 @@
 
           <article class="room reveal" style="transition-delay:.06s;">
             <div class="room__media">
-              <img src="assets/habitaciones/rooms/habitacion_doble_cover.webp" alt="Habitación Doble" loading="lazy" />
+              <img src="assets/habitaciones/rooms/habitacion_doble_cover.webp" alt="Habitación Doble - La Casa de Mamapán" loading="lazy" />
             </div>
             <div class="room__body">
-              <h3 class="room__title">Habitación Doble</h3>
+              <h3 class="room__title">Doble</h3>
               <ul class="room__meta">
                 <li>2 camas</li>
                 <li>TV</li>
@@ -172,10 +212,10 @@
                 <li>WiFi</li>
               </ul>
               <div class="room__actions">
-                <a class="btn btn--outline btn--sm" href="habitacion-doble.html">Ver detalles</a>
+                <a class="btn btn--outline btn--sm" href="#">Ver detalles</a>
                 <a class="btn btn--primary btn--sm" href="#"
-                   data-wa-room="Habitación Doble"
-                   data-wa-context="Reserva Habitación Doble desde Habitaciones">
+                   data-wa-room="Habitación Doble - La Casa de Mamapán"
+                   data-wa-context="Reserva Habitación Doble La Casa de Mamapán desde Habitaciones">
                   Reservar
                 </a>
               </div>
@@ -184,21 +224,101 @@
 
           <article class="room reveal" style="transition-delay:.12s;">
             <div class="room__media">
-              <img src="assets/habitaciones/rooms/familiar_cover.webp" alt="Familiar" loading="lazy" />
+              <img src="assets/habitaciones/rooms/familiar_cover.webp" alt="Habitación Doble Deluxe - La Casa de Mamapán" loading="lazy" />
             </div>
             <div class="room__body">
-              <h3 class="room__title">Familiar</h3>
+              <h3 class="room__title">Doble Deluxe</h3>
               <ul class="room__meta">
-                <li>Espaciosa</li>
-                <li>Ideal para grupos</li>
+                <li>Mayor confort</li>
+                <li>Baño privado</li>
                 <li>A/C</li>
                 <li>WiFi</li>
               </ul>
               <div class="room__actions">
-                <a class="btn btn--outline btn--sm" href="habitacion-familiar.html">Ver detalles</a>
+                <a class="btn btn--outline btn--sm" href="#">Ver detalles</a>
                 <a class="btn btn--primary btn--sm" href="#"
-                   data-wa-room="Familiar"
-                   data-wa-context="Reserva Familiar desde Habitaciones">
+                   data-wa-room="Habitación Doble Deluxe - La Casa de Mamapán"
+                   data-wa-context="Reserva Habitación Doble Deluxe La Casa de Mamapán desde Habitaciones">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- EL BOSQUE DE MAMAPÁN -->
+        <header class="section__head" style="margin-top:46px;">
+          <h3 class="section__title reveal" style="font-size:clamp(24px,2.4vw,32px);">El Bosque de Mamapán</h3>
+          <p class="section__subtitle reveal" style="transition-delay:.06s;">
+            Habitaciones rodeadas de una atmósfera natural, ideales para una experiencia diferente.
+          </p>
+        </header>
+
+        <div class="grid grid--3" style="margin-top:18px;">
+          <article class="room reveal">
+            <div class="room__media">
+              <img src="assets/home/rooms/bosque_room_individual_cover.webp" alt="Habitación Individual - El Bosque de Mamapán" loading="lazy" />
+              <span class="badge">El Bosque</span>
+            </div>
+            <div class="room__body">
+              <h3 class="room__title">Individual</h3>
+              <ul class="room__meta">
+                <li>1 cama</li>
+                <li>Baño privado</li>
+                <li>A/C</li>
+                <li>WiFi</li>
+              </ul>
+              <div class="room__actions">
+                <a class="btn btn--outline btn--sm" href="#">Ver detalles</a>
+                <a class="btn btn--primary btn--sm" href="#"
+                   data-wa-room="Habitación Individual - El Bosque de Mamapán"
+                   data-wa-context="Reserva Habitación Individual El Bosque de Mamapán desde Habitaciones">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room reveal" style="transition-delay:.06s;">
+            <div class="room__media">
+              <img src="assets/home/rooms/bosque_room_double_cover.webp" alt="Habitación Doble - El Bosque de Mamapán" loading="lazy" />
+            </div>
+            <div class="room__body">
+              <h3 class="room__title">Doble</h3>
+              <ul class="room__meta">
+                <li>2 camas</li>
+                <li>TV</li>
+                <li>A/C</li>
+                <li>WiFi</li>
+              </ul>
+              <div class="room__actions">
+                <a class="btn btn--outline btn--sm" href="#">Ver detalles</a>
+                <a class="btn btn--primary btn--sm" href="#"
+                   data-wa-room="Habitación Doble - El Bosque de Mamapán"
+                   data-wa-context="Reserva Habitación Doble El Bosque de Mamapán desde Habitaciones">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room reveal" style="transition-delay:.12s;">
+            <div class="room__media">
+              <img src="assets/home/rooms/bosque_room_double_deluxe_cover.webp" alt="Habitación Doble Deluxe - El Bosque de Mamapán" loading="lazy" />
+            </div>
+            <div class="room__body">
+              <h3 class="room__title">Doble Deluxe</h3>
+              <ul class="room__meta">
+                <li>Mayor confort</li>
+                <li>Baño privado</li>
+                <li>A/C</li>
+                <li>WiFi</li>
+              </ul>
+              <div class="room__actions">
+                <a class="btn btn--outline btn--sm" href="#">Ver detalles</a>
+                <a class="btn btn--primary btn--sm" href="#"
+                   data-wa-room="Habitación Doble Deluxe - El Bosque de Mamapán"
+                   data-wa-context="Reserva Habitación Doble Deluxe El Bosque de Mamapán desde Habitaciones">
                   Reservar
                 </a>
               </div>
@@ -214,19 +334,17 @@
       </div>
     </section>
 
-    <!-- GALERÍA PREMIUM (grid editorial) -->
+    <!-- GALERÍA PREMIUM -->
     <section class="section section--soft" id="galeria">
       <div class="container">
         <header class="section__head">
           <h2 class="section__title reveal">Galería</h2>
           <p class="section__subtitle reveal" style="transition-delay:.06s;">
-            Un vistazo a nuestros espacios: luz, calma y detalles que se sienten.
+            Un vistazo a nuestros espacios, ambientes y detalles que hacen especial cada estadía.
           </p>
         </header>
 
-        <!-- Grid tipo editorial (sin tocar styles.css; inline) -->
         <div class="grid reveal" style="transition-delay:.12s; grid-template-columns: 1.2fr .8fr; gap: 18px;">
-          <!-- Imagen grande -->
           <article class="card" style="box-shadow: var(--shadow2);">
             <div class="card__media" style="aspect-ratio: 16/9;">
               <img src="assets/habitaciones/gallery/rooms_gallery_01.webp" alt="Ambiente de habitación" loading="lazy" />
@@ -239,7 +357,6 @@
             </div>
           </article>
 
-          <!-- Columna derecha: 2 imágenes -->
           <div class="grid" style="grid-template-columns: 1fr; gap: 18px;">
             <article class="card" style="box-shadow: var(--shadow2);">
               <div class="card__media" style="aspect-ratio: 4/3;">
@@ -263,7 +380,6 @@
           </div>
         </div>
 
-        <!-- Segunda fila (4 imágenes) -->
         <div class="grid reveal" style="transition-delay:.18s; margin-top: 18px; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px;">
           <article class="card" style="box-shadow: var(--shadow2);">
             <div class="card__media" style="aspect-ratio: 1/1;">
@@ -295,7 +411,7 @@
       </div>
     </section>
 
-    <!-- CTA final (banner estilo offer) -->
+    <!-- CTA final -->
     <section class="section" id="cta">
       <div class="container">
         <div class="offer reveal">
@@ -334,11 +450,11 @@
 
         <div class="footer__col">
           <div class="footer__title">Explorar</div>
+          <a class="footer__link" href="index.html#top">Inicio</a>
           <a class="footer__link" href="habitaciones.html">Habitaciones</a>
           <a class="footer__link" href="nosotros.html">Sobre Nosotros</a>
-          <a class="footer__link" href="index.html#ofertas">Ofertas</a>
+          <a class="footer__link" href="index.html#experiencias">Experiencias</a>
           <a class="footer__link" href="index.html#ubicacion">Ubicación</a>
-          <a class="footer__link" href="#">Políticas</a>
         </div>
 
         <div class="footer__col">
