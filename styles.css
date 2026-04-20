@@ -73,7 +73,7 @@ ul{margin:0; padding:0}
   gap: 18px;
   position: relative;
   padding-left: 24px;
-  padding-right: 120px;
+  padding-right: 24px;
 }
 
 /* El logo original del header se oculta */
@@ -85,13 +85,9 @@ ul{margin:0; padding:0}
 .header--solid .brand__logo--light{display:none}
 .header--solid .brand__logo--dark{display:block}
 
-/* Logo fijo dentro del header */
+/* Se conserva por compatibilidad, pero ya no se usa en el nuevo layout */
 .header__logo-fixed{
-  position:absolute;
-  right:18px;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:30;
+  display:none;
 }
 
 .header__logo-link{
@@ -123,6 +119,7 @@ ul{margin:0; padding:0}
   flex-wrap: nowrap;
   white-space: nowrap;
   max-width: 100%;
+  flex: 1 1 auto;
 }
 
 .nav__link{
@@ -154,6 +151,13 @@ ul{margin:0; padding:0}
   display:flex;
   align-items:center;
   gap: 12px;
+  flex-shrink:0;
+}
+
+.header__lang{
+  display:flex;
+  align-items:center;
+  gap:8px;
   flex-shrink:0;
 }
 
@@ -227,6 +231,7 @@ ul{margin:0; padding:0}
   color:#fff;
   display:inline-flex;
   align-items:center;
+  justify-content:center;
   gap:6px;
   cursor:pointer;
   font:inherit;
@@ -383,6 +388,22 @@ ul{margin:0; padding:0}
   position:relative;
   color:#fff;
   padding: 70px 0 48px;
+}
+
+/* NUEVO LOGO CENTRADO EN HERO */
+.hero__logo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: 0 auto 18px;
+  width:100%;
+}
+
+.hero__logo img{
+  width: min(240px, 72vw);
+  height:auto;
+  object-fit:contain;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,.28));
 }
 
 .hero__eyebrow{
@@ -896,7 +917,7 @@ ul{margin:0; padding:0}
 @media (max-width: 1180px){
   .header__inner{
     padding-left: 18px;
-    padding-right: 108px;
+    padding-right: 18px;
     gap: 14px;
   }
 
@@ -917,7 +938,7 @@ ul{margin:0; padding:0}
 @media (max-width: 1040px){
   .header__inner{
     padding-left: 16px;
-    padding-right: 98px;
+    padding-right: 16px;
   }
 
   .nav{
@@ -937,6 +958,15 @@ ul{margin:0; padding:0}
     width:32px;
     height:32px;
   }
+
+  .header__lang{
+    gap:6px;
+  }
+
+  .lang-btn{
+    padding:0 10px;
+    font-size:11px;
+  }
 }
 
 @media (max-width: 980px){
@@ -945,28 +975,23 @@ ul{margin:0; padding:0}
   .header__cta{display:none}
 
   .header__inner{
-    justify-content:flex-end;
+    justify-content:space-between;
     padding-left: 16px;
-    padding-right: 80px;
+    padding-right: 16px;
   }
 
   .header__actions{
     position: static;
     transform: none;
+    margin-left:auto;
   }
 
   .header__socials{
     display:none;
   }
 
-  .header__logo-link{
-    width:60px;
-    height:60px;
-  }
-
-  .header__logo-img{
-    width:48px;
-    height:48px;
+  .header__lang{
+    display:none;
   }
 
   .grid--3{grid-template-columns: repeat(2, minmax(0,1fr))}
@@ -978,27 +1003,17 @@ ul{margin:0; padding:0}
     min-height: 86vh;
     padding-top: 108px;
   }
+
+  .hero__logo img{
+    width: min(210px, 68vw);
+  }
 }
 
 @media (max-width: 560px){
   .header__inner{
     height: 78px;
     padding-left: 12px;
-    padding-right: 68px;
-  }
-
-  .header__logo-fixed{
-    right:12px;
-  }
-
-  .header__logo-link{
-    width:54px;
-    height:54px;
-  }
-
-  .header__logo-img{
-    width:42px;
-    height:42px;
+    padding-right: 12px;
   }
 
   .header__socials{
@@ -1012,6 +1027,14 @@ ul{margin:0; padding:0}
 
   .hero{
     padding-top: 98px;
+  }
+
+  .hero__logo{
+    margin-bottom: 14px;
+  }
+
+  .hero__logo img{
+    width: min(180px, 66vw);
   }
 
   .hero__subtitle{max-width: 92%}
