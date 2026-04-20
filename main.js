@@ -26,16 +26,16 @@ const translations = {
     charm_title: "Descubre Nuestro Encanto",
     charm_subtitle: "Hospédese con nosotros y viva una experiencia única.",
 
-    highlight_rooms_title: "Elegantes Habitaciones",
-    highlight_rooms_text: "Diseño acogedor, limpieza impecable y confort boutique.",
+    highlight_rooms_title: "Habitaciones",
+    highlight_rooms_text: "Diseño acogedor, limpieza impecable y confort.",
     highlight_rooms_link: "Ver habitaciones",
 
     highlight_breakfast_title: "Desayuno Incluido",
-    highlight_breakfast_text: "Sabores locales y opciones frescas para empezar perfecto.",
+    highlight_breakfast_text: "Sabores locales y opciones frescas para empezar el día.",
     highlight_breakfast_link: "Consultar",
 
     highlight_about_title: "Nosotros",
-    highlight_about_text: "Conozca la historia y la esencia que hacen único a La Casa de Mamapán.",
+    highlight_about_text: "Conozca la historia y la esencia que hacen única la experiencia en Mamapán.",
     highlight_about_link: "Conocer más",
 
     rooms_title: "Nuestras Habitaciones",
