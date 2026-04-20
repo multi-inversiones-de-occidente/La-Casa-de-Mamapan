@@ -2,7 +2,7 @@
    CONFIG (edítalo tú)
 ========================= */
 const WHATSAPP_NUMBER_E164 = "50324134747"; // <-- CAMBIA: Ejemplo El Salvador +503 + número (sin +, sin guiones)
-const HOTEL_NAME = "La Casa de Mamapán";
+const HOTEL_NAME = "Mamapán Signature Journey";
 
 /* =========================
    TRANSLATIONS
@@ -19,8 +19,8 @@ const translations = {
     cta_whatsapp: "Reservar por WhatsApp",
 
     hero_eyebrow: "Bienvenidos a",
-    hero_title: "La Casa de Mamapán",
-    hero_subtitle: "Hotel Boutique — descanso, calidez y experiencia en un solo lugar.",
+    hero_title: "Mamapán Signature Journey",
+    hero_subtitle: "From city to forest. An immersive experience in Ahuachapán, Ruta de Las Flores, El Salvador",
     hero_rooms: "Ver Habitaciones",
 
     charm_title: "Descubre Nuestro Encanto",
@@ -113,8 +113,8 @@ const translations = {
     cta_whatsapp: "Book via WhatsApp",
 
     hero_eyebrow: "Welcome to",
-    hero_title: "La Casa de Mamapán",
-    hero_subtitle: "Boutique Hotel — rest, warmth, and experience all in one place.",
+    hero_title: "Mamapán Signature Journey",
+    hero_subtitle: "From city to forest. An immersive experience in Ahuachapán, Ruta de Las Flores, El Salvador",
     hero_rooms: "View Rooms",
 
     charm_title: "Discover Our Charm",
