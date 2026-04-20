@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#F5F0E8" />
 
   <title>Sobre Nosotros | Mamapán</title>
-  <meta name="description" content="Conozca la historia, tradiciones y esencia de Mamapán en Ahuachapán." />
+  <meta name="description" content="Conozca la historia, tradiciones, gastronomía y esencia de Mamapán en Ahuachapán." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Sobre Nosotros | Mamapán" />
@@ -139,7 +139,8 @@
   </header>
 
   <main id="top">
-    <section class="hero" style="min-height:82vh; padding-top:86px;">
+    <!-- HERO -->
+    <section class="hero" style="min-height:78vh; padding-top:86px;">
       <div class="hero__media">
         <video class="hero__video" autoplay muted loop playsinline poster="assets/home/about/about_hero_poster.webp">
           <source src="assets/home/about/about_hero_video.mp4" type="video/mp4" />
@@ -157,41 +158,102 @@
 
         <p class="hero__eyebrow reveal">Nuestra esencia</p>
         <h1 class="hero__title reveal" style="transition-delay:.06s;">Sobre Nosotros</h1>
-        <p class="hero__subtitle reveal" style="transition-delay:.12s; max-width:640px; margin:0 auto 22px;">
-          Un lugar donde la historia, la naturaleza y la hospitalidad familiar se convierten en experiencia.
+        <p class="hero__subtitle reveal" style="transition-delay:.12s; max-width:720px; margin:0 auto 22px;">
+          Mamapán reúne historia, tradiciones, gastronomía y hospitalidad familiar en una experiencia auténtica en el corazón de Ahuachapán.
         </p>
 
         <div class="hero__cta reveal" style="transition-delay:.18s; justify-content:center;">
-          <a class="btn btn--primary" href="#" data-wa-context="Consulta desde Hero - Sobre Nosotros" data-i18n="cta_whatsapp">
-            Reservar por WhatsApp
-          </a>
-          <a class="btn btn--ghost" href="#historia-mamapan">
+          <a class="btn btn--primary" href="#historia" data-i18n="highlight_about_link">
             Conocer más
+          </a>
+          <a class="btn btn--ghost" href="#" data-wa-context="Consulta desde Hero - Sobre Nosotros" data-i18n="cta_whatsapp">
+            Reservar por WhatsApp
           </a>
         </div>
       </div>
 
-      <a class="hero__scroll" href="#historia-mamapan" aria-label="Bajar a contenido">
+      <a class="hero__scroll" href="#historia" aria-label="Bajar a contenido">
         <span></span>
       </a>
     </section>
 
-    <section class="section section--soft" id="historia-mamapan">
-      <div class="container" style="max-width:920px;">
+    <!-- HISTORIA -->
+    <section class="section" id="historia">
+      <div class="container">
         <header class="section__head">
-          <h2 class="section__title reveal">La historia de Mamapán</h2>
+          <h2 class="section__title reveal">Nuestra Historia</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s">
+            Patrimonio vivo en el corazón de Ahuachapán.
+          </p>
+        </header>
+
+        <div class="location" style="grid-template-columns: 1fr 1fr; align-items:start;">
+          <div class="location__info reveal" style="transition-delay:.06s">
+            <h3 class="location__title">Un edificio que guarda memorias</h3>
+            <p class="location__text" style="font-size:14.8px; line-height:1.9;">
+              La Casa de Mamapán ha sido durante mucho tiempo una piedra angular del rico patrimonio de Ahuachapán. Nuestro edificio, construido originalmente a finales del siglo XIX, ha sido testigo de muchas transformaciones, desde una gran propiedad familiar hasta el encantador hotel que es hoy. Al preservar la integridad arquitectónica y el espíritu de este edificio histórico, ofrecemos a nuestros huéspedes una visión única del pasado y, al mismo tiempo, brindamos todas las comodidades del mundo moderno.
+            </p>
+
+            <div class="location__actions" style="margin-top: 12px;">
+              <a class="btn btn--outline" href="index.html#ubicacion">Ver ubicación</a>
+              <a class="btn btn--primary" href="#" data-wa-context="Consulta historia / edificio - Sobre Nosotros">
+                Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid--3 reveal" style="transition-delay:.12s; grid-template-columns: repeat(2, minmax(0,1fr)); align-content:start;">
+            <article class="card" style="box-shadow: var(--shadow2);">
+              <div class="card__media" style="aspect-ratio: 4/3;">
+                <img src="assets/home/about/about_gallery_01.webp" alt="Arquitectura histórica" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" style="margin:0; font-size:14.5px;">Arquitectura</h3>
+                <p class="card__text" style="margin:6px 0 0;">Detalles que preservan la esencia del siglo XIX.</p>
+              </div>
+            </article>
+
+            <article class="card" style="box-shadow: var(--shadow2);">
+              <div class="card__media" style="aspect-ratio: 4/3;">
+                <img src="assets/home/about/about_gallery_02.webp" alt="Espacios acogedores" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" style="margin:0; font-size:14.5px;">Ambientes</h3>
+                <p class="card__text" style="margin:6px 0 0;">Espacios pensados para descansar con calma.</p>
+              </div>
+            </article>
+
+            <article class="card" style="box-shadow: var(--shadow2); grid-column: 1 / -1;">
+              <div class="card__media" style="aspect-ratio: 16/9;">
+                <img src="assets/home/about/about_gallery_03.webp" alt="Parque Concordia y entorno" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" style="margin:0; font-size:14.5px;">Entorno</h3>
+                <p class="card__text" style="margin:6px 0 0;">Junto al sereno Parque Concordia, en el corazón de la ciudad.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEXTO NARRATIVO -->
+    <section class="section section--soft" id="esencia-mamapan">
+      <div class="container" style="max-width:940px;">
+        <header class="section__head">
+          <h2 class="section__title reveal">La esencia de Mamapán</h2>
           <p class="section__subtitle reveal" style="transition-delay:.06s;">
-            Un origen familiar que con el tiempo se transformó en una experiencia para compartir.
+            Una historia familiar convertida en experiencia.
           </p>
         </header>
 
         <div class="reveal" style="transition-delay:.12s;">
           <div style="
-            background: rgba(255,255,255,.78);
+            background: rgba(255,255,255,.82);
             border: 1px solid rgba(30,27,22,.08);
             border-radius: 28px;
-            padding: clamp(24px, 4vw, 42px);
-            box-shadow: 0 20px 60px rgba(0,0,0,.08);
+            padding: clamp(24px, 4vw, 44px);
+            box-shadow: 0 22px 60px rgba(0,0,0,.08);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
           ">
@@ -202,45 +264,180 @@
               color:rgba(30,27,22,.92);
               text-align:center;
             ">
-              Bienvenidos a Mamapán, donde la historia, tradiciones, gastronomía y la hospitalidad familiar
-              se entrelazan en el corazón de Ahuachapán.
+              Bienvenidos a Mamapán, donde la historia, tradiciones, gastronomía y la hospitalidad familiar se entrelazan en el corazón de Ahuachapán.
               <br><br>
-
-              Mamapán nació en una casa de familia del Siglo XVIII.
-              Primero fue una casa, una casa habitada por tres mujeres, llena de hospitalidad,
-              conversaciones largas con café compartido, con silencios bonitos.
+              Mamapán nació en una casa de familia del Siglo XVIII. Primero fue una casa, una casa habitada por tres mujeres, llena de hospitalidad, conversaciones largas con café compartido, con silencios bonitos.
               <br><br>
-
-              Un lugar donde lo simple se volvía extraordinario cada vez que sus familiares llegaban a
-              visitarles.
+              Un lugar donde lo simple se volvía extraordinario cada vez que sus familiares llegaban a visitarles.
               <br><br>
-
               Pero Mamapán no podía quedarse entre paredes y recuerdos…
               <br><br>
-
-              La Casa de Mamapán no comenzó como un hotel, ni como un destino turístico, sino como
-              un deseo familiar profundo de crear un espacio donde las personas pudieran volver a sentir
-              un refugio íntimo y acogedor.
+              La Casa de Mamapán no comenzó como un hotel, ni como un destino turístico, sino como un deseo familiar profundo de crear un espacio donde las personas pudieran volver a sentir un refugio íntimo y acogedor.
               <br><br>
-
-              Mamapán es un lugar donde cada detalle invita a bajar el ritmo, a compartir y a reconectar con
-              lo esencial.
+              Mamapán es un lugar donde cada detalle invita a bajar el ritmo, a compartir y a reconectar con lo esencial.
               <br><br>
-
-              Con el tiempo, ese espíritu creció y se expandió hacia la naturaleza, dando vida a El Bosque
-              de Mamapán: un santuario vivo donde la tierra y lo espiritual se entrelazan en experiencias que
-              despiertan los sentidos.
+              Con el tiempo, ese espíritu creció y se expandió hacia la naturaleza, dando vida a El Bosque de Mamapán: un santuario vivo donde la tierra y lo espiritual se entrelazan en experiencias que despiertan los sentidos.
               <br><br>
-
-              Hoy Mamapán es más que un lugar: es una colección de experiencias cuidadosamente
-              diseñadas, con presencia, conexión y pertenencia.
+              Hoy Mamapán es más que un lugar: es una colección de experiencias cuidadosamente diseñadas, con presencia, conexión y pertenencia.
               <br><br>
-
               Y quizás sin darte cuenta, Mamapán no solo es un lugar al que llegas…
               <br>
               Es un lugar al que siempre vuelves.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILOSOFÍA -->
+    <section class="section section--image" id="filosofia" style="--bg:url('assets/home/about/about_philosophy_bg.webp');">
+      <div class="section__veil"></div>
+      <div class="container">
+        <header class="section__head section__head--onimage">
+          <h2 class="section__title section__title--light reveal">Nuestra Filosofía</h2>
+          <p class="section__subtitle section__subtitle--light reveal" style="transition-delay:.06s; max-width: 880px;">
+            En Mamapán creemos en brindar más que un lugar para hospedarse. Cada espacio, detalle y experiencia nace del deseo de compartir la calidez, la cultura y la esencia auténtica de Ahuachapán.
+          </p>
+        </header>
+
+        <div class="icons reveal" style="transition-delay:.12s;">
+          <div class="iconcard">
+            <div class="iconcard__icon">🎨</div>
+            <div class="iconcard__label">Arte local</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">☕</div>
+            <div class="iconcard__label">Café gourmet</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">🥘</div>
+            <div class="iconcard__label">Origen local</div>
+          </div>
+          <div class="iconcard">
+            <div class="iconcard__icon">🤍</div>
+            <div class="iconcard__label">Hospitalidad</div>
+          </div>
+        </div>
+
+        <div class="center mt-24 reveal" style="transition-delay:.18s;">
+          <a class="btn btn--ghost btn--ghost-light" href="#" data-wa-context="Consulta filosofía / experiencia cultural - Sobre Nosotros">
+            Quiero conocer más
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section section--soft" id="servicios">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Nuestros Servicios</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s; max-width: 900px;">
+            Estamos orgullosos de nuestra atención al detalle y servicio personalizado. Cada visita está pensada para que el huésped se sienta acompañado, en calma y conectado con la esencia de Mamapán.
+          </p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__media" style="aspect-ratio: 16/10;">
+              <img src="assets/home/about/about_service_01.webp" alt="Atención personalizada" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Atención personalizada</h3>
+              <p class="card__text">Un equipo atento a cada detalle, con calidez y discreción.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay:.06s;">
+            <div class="card__media" style="aspect-ratio: 16/10;">
+              <img src="assets/home/about/about_service_02.webp" alt="Café gourmet" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Café gourmet</h3>
+              <p class="card__text">Sabores seleccionados para acompañar sus mañanas con calma.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay:.12s;">
+            <div class="card__media" style="aspect-ratio: 16/10;">
+              <img src="assets/home/about/about_service_03.webp" alt="Habitaciones estilo colonial" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Estilo colonial</h3>
+              <p class="card__text">Habitaciones con carácter, comodidad y un ambiente único.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="center mt-24 reveal">
+          <a class="btn btn--primary" href="#" data-wa-context="Consulta servicios / comodidades - Sobre Nosotros">
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONÉCTATE -->
+    <section class="section" id="conectate">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Conéctate con Nosotros</h2>
+          <p class="section__subtitle reveal" style="transition-delay:.06s; max-width: 980px;">
+            Te invitamos a ser parte de una historia que continúa escribiéndose con cada huésped que cruza nuestras puertas. En Mamapán, cada estadía está pensada para convertirse en un recuerdo que permanece.
+          </p>
+        </header>
+
+        <div class="offer reveal" style="transition-delay:.12s;">
+          <div class="offer__media" style="aspect-ratio: 16/7;">
+            <img src="assets/home/about/about_connect_banner.webp" alt="Mamapán - Conéctate" loading="lazy" />
+          </div>
+          <div class="offer__content">
+            <h3 class="offer__title">Reserve directo, con atención personalizada</h3>
+            <p class="offer__text">Un mensaje y comenzamos a planificar su estadía.</p>
+            <div class="offer__actions">
+              <a class="btn btn--outline" href="habitaciones.html">Ver habitaciones</a>
+              <a class="btn btn--primary" href="#" data-wa-context="Reserva desde sección Conéctate - Sobre Nosotros">
+                Reservar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="section section--footer" id="contacto">
+      <div class="container footer">
+        <div class="footer__col">
+          <div class="footer__brand">Mamapán</div>
+          <p class="footer__text">Hotel Boutique — más cerca de ti.</p>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Contacto</div>
+          <p class="footer__text">WhatsApp: <span class="mono" id="waDisplay">+503 2413-4747</span></p>
+          <p class="footer__text">Teléfono: <span class="mono">+503 2413-4747</span></p>
+          <p class="footer__text">Correo: <span class="mono">mamapan-ahuachapan@hotmail.com</span></p>
+          <p class="footer__text">Horario: 7:00 a.m. – 10:00 p.m.</p>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Explorar</div>
+          <a class="footer__link" href="index.html#top">Inicio</a>
+          <a class="footer__link" href="habitaciones.html">Habitaciones</a>
+          <a class="footer__link" href="nosotros.html">Sobre Nosotros</a>
+          <a class="footer__link" href="index.html#ubicacion">Ubicación</a>
+          <a class="footer__link" href="index.html#contacto">Contacto</a>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Reservas</div>
+          <p class="footer__text">Reserve rápido y directo con atención personalizada.</p>
+          <a class="btn btn--primary btn--sm" href="#" data-wa-context="Reserva desde Footer - Sobre Nosotros">Reservar por WhatsApp</a>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> Mamapán — Todos los derechos reservados.</span>
         </div>
       </div>
     </section>
