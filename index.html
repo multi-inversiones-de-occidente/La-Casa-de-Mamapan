@@ -27,14 +27,11 @@
 </head>
 
 <body>
-  <!-- Top progress line (subtle luxury) -->
   <div class="topline" aria-hidden="true"></div>
 
-  <!-- Header -->
   <header class="header" id="siteHeader">
     <div class="container header__inner">
 
-      <!-- Logo fijo dentro del header -->
       <div class="header__logo-fixed">
         <a href="#top" aria-label="Ir al inicio" class="header__logo-link">
           <img
@@ -55,7 +52,6 @@
       </nav>
 
       <div class="header__actions">
-        <!-- Redes sociales header -->
         <div class="header__socials">
           <a href="https://www.facebook.com/lacasademamapan/" target="_blank" rel="noopener" aria-label="Facebook" class="header__social-link">
             <i class="fab fa-facebook-f"></i>
@@ -78,7 +74,6 @@
       </div>
     </div>
 
-    <!-- Mobile menu -->
     <div class="mobile" id="mobileMenu" aria-hidden="true">
       <div class="mobile__panel">
         <a href="nosotros.html" class="mobile__link" data-i18n="nav_about">Sobre Nosotros</a>
@@ -88,7 +83,6 @@
         <a href="#opiniones" class="mobile__link" data-i18n="nav_reviews">Opiniones</a>
         <a href="#contacto" class="mobile__link" data-i18n="nav_contact">Contacto</a>
 
-        <!-- Idiomas móvil -->
         <div style="display:flex; align-items:center; gap:10px; margin-top:16px; margin-bottom:10px;">
           <button
             type="button"
@@ -115,7 +109,6 @@
           </button>
         </div>
 
-        <!-- Redes sociales menú móvil -->
         <div class="mobile__socials">
           <a href="https://www.facebook.com/lacasademamapan/" target="_blank" rel="noopener" aria-label="Facebook" class="mobile__social-link">
             <i class="fab fa-facebook-f"></i>
@@ -135,7 +128,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <main id="top">
     <section class="hero">
       <div class="hero__media">
@@ -167,7 +159,6 @@
       </a>
     </section>
 
-    <!-- SECTION: ENCANTO / HIGHLIGHTS -->
     <section class="section" id="encanto">
       <div class="container">
         <header class="section__head">
@@ -214,7 +205,6 @@
       </div>
     </section>
 
-    <!-- SECTION: HABITACIONES -->
     <section class="section section--soft" id="habitaciones">
       <div class="container">
         <header class="section__head">
@@ -394,7 +384,6 @@
       </div>
     </section>
 
-    <!-- SECTION: EXPERIENCIAS -->
     <section class="section section--image" id="experiencias" style="--bg:url('assets/home/experiences/home_experiences_bg.webp');">
       <div class="section__veil"></div>
       <div class="container">
@@ -447,7 +436,6 @@
       </div>
     </section>
 
-    <!-- SECTION: OPINIONES -->
     <section class="section section--soft" id="opiniones">
       <div class="container">
         <header class="section__head">
@@ -504,7 +492,6 @@
       </div>
     </section>
 
-    <!-- SECTION: UBICACIÓN -->
     <section class="section" id="ubicacion">
       <div class="container">
         <header class="section__head">
@@ -552,7 +539,6 @@
       </div>
     </section>
 
-    <!-- SECTION: FORMULARIO -->
     <section class="section section--soft" id="contacto">
       <div class="container">
         <div style="
@@ -585,9 +571,8 @@
             </header>
 
             <form
-              action="mamapan-ahuachapan@hotmail.com"
-              method="post"
-              enctype="text/plain"
+              action="enviar.php"
+              method="POST"
               style="
                 display:grid;
                 grid-template-columns: repeat(2, minmax(0,1fr));
@@ -601,9 +586,8 @@
                 <input
                   type="text"
                   id="nombre"
-                  name="Nombre"
+                  name="nombre"
                   placeholder="Ingrese su nombre"
-                  data-i18n-placeholder="form_name_ph"
                   required
                   style="
                     width:100%;
@@ -626,9 +610,8 @@
                 <input
                   type="text"
                   id="apellido"
-                  name="Apellido"
+                  name="apellido"
                   placeholder="Ingrese su apellido"
-                  data-i18n-placeholder="form_lastname_ph"
                   required
                   style="
                     width:100%;
@@ -651,9 +634,8 @@
                 <input
                   type="email"
                   id="email"
-                  name="Email"
+                  name="email"
                   placeholder="Ingrese su email"
-                  data-i18n-placeholder="form_email_ph"
                   required
                   style="
                     width:100%;
@@ -676,9 +658,8 @@
                 <input
                   type="tel"
                   id="telefono"
-                  name="Telefono"
+                  name="telefono"
                   placeholder="Ingrese su teléfono"
-                  data-i18n-placeholder="form_phone_ph"
                   required
                   style="
                     width:100%;
@@ -700,9 +681,8 @@
                 <label for="mensaje" style="font-size:13px; color:rgba(30,27,22,.78); font-weight:500;" data-i18n="form_message">Mensaje</label>
                 <textarea
                   id="mensaje"
-                  name="Mensaje"
+                  name="mensaje"
                   placeholder="Escriba su mensaje"
-                  data-i18n-placeholder="form_message_ph"
                   rows="6"
                   required
                   style="
@@ -750,14 +730,12 @@
       </div>
     </section>
 
-    <!-- CONTACTO (footer target) -->
     <section class="section section--footer" id="footer-contacto">
       <div class="container footer">
         <div class="footer__col">
           <div class="footer__brand">La Casa de Mamapán</div>
           <p class="footer__text" data-i18n="footer_tagline">Hotel Boutique — más cerca de ti.</p>
 
-          <!-- Redes sociales footer -->
           <div style="display:flex; align-items:center; gap:12px; margin-top:16px;">
             <a href="https://www.facebook.com/lacasademamapan/" target="_blank" rel="noopener" aria-label="Facebook"
                style="width:38px; height:38px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.16);">
@@ -806,7 +784,6 @@
     </section>
   </main>
 
-  <!-- Floating WhatsApp -->
   <a class="wa-float" href="#" id="waFloat" aria-label="Contactar por WhatsApp" data-wa-context="Botón flotante">
     <span class="wa-float__icon" aria-hidden="true">✆</span>
     <span class="wa-float__tip" data-i18n="cta_whatsapp">Reservar por WhatsApp</span>
