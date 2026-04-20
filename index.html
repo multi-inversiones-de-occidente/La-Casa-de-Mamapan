@@ -32,16 +32,6 @@
   <header class="header" id="siteHeader">
     <div class="container header__inner">
 
-      <div class="header__logo-fixed">
-        <a href="#top" aria-label="Ir al inicio" class="header__logo-link">
-          <img
-            src="assets/brand/Logo La casa de mamapán.jpg.jpeg"
-            alt="La Casa de Mamapán"
-            class="header__logo-img"
-          />
-        </a>
-      </div>
-
       <nav class="nav" id="nav">
         <a href="nosotros.html" class="nav__link" data-i18n="nav_about">Sobre Nosotros</a>
         <a href="#experiencias" class="nav__link" data-i18n="nav_experiences">Experiencias</a>
@@ -52,6 +42,28 @@
       </nav>
 
       <div class="header__actions">
+        <div class="header__lang">
+          <button
+            type="button"
+            class="lang-btn"
+            data-lang="es"
+            data-active="true"
+            aria-label="Cambiar a español"
+          >
+            ES
+          </button>
+
+          <button
+            type="button"
+            class="lang-btn"
+            data-lang="en"
+            data-active="false"
+            aria-label="Switch to English"
+          >
+            EN
+          </button>
+        </div>
+
         <div class="header__socials">
           <a href="https://www.facebook.com/lacasademamapan/" target="_blank" rel="noopener" aria-label="Facebook" class="header__social-link">
             <i class="fab fa-facebook-f"></i>
@@ -92,7 +104,6 @@
             aria-label="Cambiar a español"
             style="height:40px; padding:0 14px; border-radius:999px; border:1px solid rgba(30,27,22,.10); background:rgba(30,27,22,.05); color:#1E1B16; display:flex; align-items:center; gap:6px; cursor:pointer; font:inherit; font-size:12px; font-weight:600;"
           >
-            <span aria-hidden="true">🇪🇸</span>
             <span>ES</span>
           </button>
 
@@ -104,7 +115,6 @@
             aria-label="Switch to English"
             style="height:40px; padding:0 14px; border-radius:999px; border:1px solid rgba(30,27,22,.10); background:rgba(30,27,22,.05); color:#1E1B16; display:flex; align-items:center; gap:6px; cursor:pointer; font:inherit; font-size:12px; font-weight:600;"
           >
-            <span aria-hidden="true">🇺🇸</span>
             <span>EN</span>
           </button>
         </div>
@@ -138,6 +148,13 @@
       </div>
 
       <div class="container hero__content">
+        <div class="hero__logo reveal">
+          <img
+            src="assets/brand/Logotipo La casa de mamapán.png"
+            alt="Logotipo La Casa de Mamapán"
+          />
+        </div>
+
         <p class="hero__eyebrow reveal" data-i18n="hero_eyebrow">Bienvenidos a</p>
         <h1 class="hero__title reveal" style="transition-delay:.06s" data-i18n="hero_title">Mamapán Signature Journey</h1>
         <p class="hero__subtitle reveal" style="transition-delay:.12s" data-i18n="hero_subtitle">
