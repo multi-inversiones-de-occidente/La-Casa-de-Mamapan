@@ -29,73 +29,84 @@
   <header class="header header--solid" id="siteHeader">
     <div class="container header__inner">
 
-      <!-- Logo fijo dentro del header -->
-      <div class="header__logo-fixed">
-        <a href="index.html#top" aria-label="Ir al inicio" class="header__logo-link">
-          <img
-            src="assets/brand/Logo La casa de mamapán.jpg.jpeg"
-            alt="La Casa de Mamapán"
-            class="header__logo-img"
-          />
-        </a>
-      </div>
-
       <nav class="nav" id="nav">
-        <a href="index.html#top" class="nav__link">Inicio</a>
+        <a href="index.html" class="nav__link">Inicio</a>
         <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
         <a href="index.html#experiencias" class="nav__link">Experiencias</a>
-        <a href="habitaciones.html" class="nav__link">Habitaciones</a>
         <a href="index.html#ubicacion" class="nav__link">Ubicación</a>
         <a href="index.html#opiniones" class="nav__link">Opiniones</a>
         <a href="index.html#contacto" class="nav__link">Contacto</a>
       </nav>
 
       <div class="header__actions">
-        <!-- Redes sociales header -->
-        <div class="header__socials">
-          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="header__social-link">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="header__social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="header__social-link">
-            <i class="fab fa-tiktok"></i>
-          </a>
+        <div class="header__lang">
+          <button
+            type="button"
+            class="lang-btn"
+            data-lang="es"
+            data-active="true"
+            aria-label="Cambiar a español"
+          >
+            ES
+          </button>
+
+          <button
+            type="button"
+            class="lang-btn"
+            data-lang="en"
+            data-active="false"
+            aria-label="Switch to English"
+          >
+            EN
+          </button>
         </div>
 
         <button class="iconbtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
 
-        <a class="btn btn--primary btn--sm header__cta" href="#" data-wa-context="Reserva desde Habitaciones">
-          Reservar por WhatsApp
-        </a>
+        <div class="header__logo" style="display:flex; align-items:center; justify-content:center; height:36px; min-width:110px;">
+          <img
+            src="assets/brand/Logotipo La casa de mamapán.png"
+            alt="Logo Mamapán"
+            style="max-height:36px; width:auto; display:block; object-fit:contain;"
+          />
+        </div>
       </div>
     </div>
 
     <!-- Mobile -->
     <div class="mobile" id="mobileMenu" aria-hidden="true">
       <div class="mobile__panel">
-        <a href="index.html#top" class="mobile__link">Inicio</a>
+        <a href="index.html" class="mobile__link">Inicio</a>
         <a href="nosotros.html" class="mobile__link">Sobre Nosotros</a>
         <a href="index.html#experiencias" class="mobile__link">Experiencias</a>
-        <a href="habitaciones.html" class="mobile__link">Habitaciones</a>
         <a href="index.html#ubicacion" class="mobile__link">Ubicación</a>
         <a href="index.html#opiniones" class="mobile__link">Opiniones</a>
         <a href="index.html#contacto" class="mobile__link">Contacto</a>
 
-        <!-- Redes sociales menú móvil -->
-        <div class="mobile__socials">
-          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="mobile__social-link">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="mobile__social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="mobile__social-link">
-            <i class="fab fa-tiktok"></i>
-          </a>
+        <div style="display:flex; align-items:center; gap:10px; margin-top:16px; margin-bottom:10px;">
+          <button
+            type="button"
+            class="lang-btn"
+            data-lang="es"
+            data-active="true"
+            aria-label="Cambiar a español"
+            style="height:40px; padding:0 14px; border-radius:999px; border:1px solid rgba(30,27,22,.10); background:rgba(30,27,22,.05); color:#1E1B16; display:flex; align-items:center; gap:6px; cursor:pointer; font:inherit; font-size:12px; font-weight:600;"
+          >
+            <span>ES</span>
+          </button>
+
+          <button
+            type="button"
+            class="lang-btn"
+            data-lang="en"
+            data-active="false"
+            aria-label="Switch to English"
+            style="height:40px; padding:0 14px; border-radius:999px; border:1px solid rgba(30,27,22,.10); background:rgba(30,27,22,.05); color:#1E1B16; display:flex; align-items:center; gap:6px; cursor:pointer; font:inherit; font-size:12px; font-weight:600;"
+          >
+            <span>EN</span>
+          </button>
         </div>
 
         <a class="btn btn--primary mobile__cta" href="#" data-wa-context="Reserva desde menú móvil (Habitaciones)">
@@ -438,6 +449,21 @@
         <div class="footer__col">
           <div class="footer__brand">La Casa de Mamapán</div>
           <p class="footer__text">Hotel Boutique — más cerca de ti.</p>
+
+          <div style="display:flex; align-items:center; gap:12px; margin-top:16px;">
+            <a href="https://www.facebook.com/lacasademamapan/" target="_blank" rel="noopener" aria-label="Facebook"
+               style="width:38px; height:38px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.16);">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/lacasademamapan/" target="_blank" rel="noopener" aria-label="Instagram"
+               style="width:38px; height:38px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.16);">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@lacasademamapan/" target="_blank" rel="noopener" aria-label="TikTok"
+               style="width:38px; height:38px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.16);">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
         </div>
 
         <div class="footer__col">
