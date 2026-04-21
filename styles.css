@@ -159,7 +159,7 @@ ul{margin:0; padding:0}
   align-items:center;
   gap:8px;
   flex-shrink:0;
-  margin-right: 40px; /* 👈 ESTA ES LA CLAVE */
+  margin-right: 80px; /* 👈 ESTA ES LA CLAVE */
 }
 
 .header__socials{
